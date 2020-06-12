@@ -1,4 +1,4 @@
-import PostPreview from "./post-preview";
+import PostPreview from "./PortfolioItem";
 import Post from "../types/post";
 
 type Props = {

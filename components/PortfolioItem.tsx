@@ -1,4 +1,4 @@
-import DateFormater from "./date-formater";
+import DateFormater from "./DateFormater";
 import Link from "next/link";
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
   slug: string;
 };
 
-const PostPreview = ({ title, date, slug }: Props) => {
+const PortfolioItem = ({ title, date, slug }: Props) => {
   return (
     <div>
       <h3 className="text-3xl mb-3 leading-snug">
@@ -20,4 +20,4 @@ const PostPreview = ({ title, date, slug }: Props) => {
   );
 };
 
-export default PostPreview;
+export default PortfolioItem;

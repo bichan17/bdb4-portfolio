@@ -14,8 +14,7 @@ export async function getPostBySlug(slug: string, fields: string[] = []) {
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
-
-  const parsedMarkdown = await markdownToHtml(content || "");
+  // const parsedMarkdown = await markdownToHtml(content || "");
 
   type Items = {
     [key: string]: string;
@@ -29,8 +28,7 @@ export async function getPostBySlug(slug: string, fields: string[] = []) {
       items[field] = realSlug;
     }
     if (field === "content") {
-      items[field] = parsedMarkdown;
-      items["markdown"] = content;
+      items[field] = content;
     }
 
     if (data[field]) {

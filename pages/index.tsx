@@ -1,7 +1,7 @@
-import Container from "../components/container";
-import PortfolioList from "../components/portfolio-list";
-import Intro from "../components/intro";
-import Layout from "../components/layout";
+import Container from "../components/Container";
+import PortfolioList from "../components/PortfolioList";
+import Intro from "../components/Intro";
+import Layout from "../components/Layout";
 import { getAllPosts } from "../lib/api";
 import markdownToHtml from "../lib/markdownToHtml";
 import Head from "next/head";
