@@ -3,6 +3,7 @@ import PortfolioList from "../components/portfolio-list";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
+import markdownToHtml from "../lib/markdownToHtml";
 import Head from "next/head";
 import Post from "../types/post";
 
@@ -29,7 +30,9 @@ const Index = ({ allPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(["title", "date", "slug"]);
+  const allPosts = await getAllPosts(["title", "date", "slug", "content"]);
+
+  console.log(allPosts);
 
   return {
     props: { allPosts },

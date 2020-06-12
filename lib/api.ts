@@ -1,6 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
+import markdownToHtml from "../lib/markdownToHtml";
 
 const postsDirectory = join(process.cwd(), "_portfolio");
 
@@ -8,11 +9,13 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
+export async function getPostBySlug(slug: string, fields: string[] = []) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
+
+  const parsedMarkdown = await markdownToHtml(content || "");
 
   type Items = {
     [key: string]: string;
@@ -26,7 +29,8 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
       items[field] = realSlug;
     }
     if (field === "content") {
-      items[field] = content;
+      items[field] = parsedMarkdown;
+      items["markdown"] = content;
     }
 
     if (data[field]) {
@@ -39,9 +43,9 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 
 export function getAllPosts(fields: string[] = []) {
   const slugs = getPostSlugs();
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    // sort posts by date in descending order
+
+  const promises = slugs
+    .map(async (slug) => await getPostBySlug(slug, fields))
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return posts;
+  return Promise.all(promises);
 }
