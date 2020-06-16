@@ -12,7 +12,7 @@ type Props = {
 };
 
 const PortfolioItem = ({ title, date, slug, content }: Props) => {
-  console.log(content);
+  // console.log(content);
 
   // const [parsedContent, setContent] = useState();
 
