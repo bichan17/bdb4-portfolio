@@ -16,26 +16,9 @@
 
   /* Typography */
 
-  --unit: 16;
-  --font-micro-size: 1.2rem;
-  --font-micro-line-height: 1.2;
-
-  --font-small-size: 1.6rem;
-  --font-small-line-height: 1.25;
-
-  --font-base-size: 2.2rem;
-  --font-base-line-height: 1.2;
-  --font-medium-size: 2.6rem;
-  --font-medium-line-height: 1;
-  --font-large-size: 3.6rem;
-  --font-large-line-height: 1.1;
-
-  --font-huge-size: 5.4rem;
-  --font-huge-line-height: 1.24;
-
   --font-base-size-mobile: 1.8rem;
   --font-base-line-height-mobile: 1.44;
-  --font-base-size-desktop: 2.2rem;
+  --font-base-size-desktop: 2.4rem;
   --font-base-line-height-desktop: 1.2;
 
   /* layout */
