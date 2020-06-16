@@ -1,0 +1,26 @@
+@import "./fonts.css";
+@import "./custom-media.css";
+@import "./custom-properties.css";
+
+html {
+  font-family: var(--font-family-sans);
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: var(--color-black);
+  color: var(--color-white);
+  margin: 0;
+  font-size: var(--font-base-size-mobile);
+  line-height: var(--font-base-line-height-mobile);
+  @media (--media-min-small) {
+    font-size: var(--font-base-size-desktop);
+    line-height: var(--font-base-line-height-desktop);
+  }
+}

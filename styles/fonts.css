@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Founders Grotesk Regular";
+  src: url("/assets/fonts/FoundersGroteskRegular.eot");
+  src: url("/assets/fonts/FoundersGroteskRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/FoundersGroteskRegular.woff2") format("woff2"),
+    url("/assets/fonts/FoundersGroteskRegular.woff") format("woff"),
+    url("/assets/fonts/FoundersGroteskRegular.ttf") format("truetype"),
+    url("/assets/fonts/FoundersGroteskRegular.svg#FoundersGroteskRegular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
