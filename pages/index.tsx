@@ -35,24 +35,9 @@ const Index = ({ workPosts, funPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const workPosts = await getPostsByType("work", [
-    "title",
-    "date",
-    "slug",
-    "tags",
-    "content",
-    "published",
-  ]);
-  const funPosts = await getPostsByType("fun", [
-    "title",
-    "date",
-    "slug",
-    "tags",
-    "content",
-    "published",
-  ]);
-
-  // console.log(allPosts);
+  const fields = ["title", "date", "slug", "tags", "content", "published"];
+  const workPosts = await getPostsByType("work", fields);
+  const funPosts = await getPostsByType("fun", fields);
 
   return {
     props: { workPosts, funPosts },
