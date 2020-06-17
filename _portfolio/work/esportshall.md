@@ -1,6 +1,4 @@
 ---
-type: work
-
 project-link: http://www.esportshall.com/
 title: "Esports Hall of Fame"
 date: "august 2016"

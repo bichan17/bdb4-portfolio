@@ -1,6 +1,4 @@
 ---
-type: work
-
 project-link: http://www.whotelsfit.com/
 title: "W Hotels FIT"
 date: "june 2015"

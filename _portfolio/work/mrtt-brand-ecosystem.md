@@ -1,5 +1,4 @@
 ---
-type: work
 project-link: https://the-luxury-collection.starwoodhotels.com/
 title: "Marriott Brand Ecosystem"
 date: "December 2017"

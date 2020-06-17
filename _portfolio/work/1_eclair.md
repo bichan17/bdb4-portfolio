@@ -1,6 +1,4 @@
 ---
-type: work
-
 project-link: http://lemeridieneclair.com/
 title: "Eclair"
 date: "December 2014"

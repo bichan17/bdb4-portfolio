@@ -2,18 +2,16 @@ import Container from "../components/Container";
 import PortfolioList from "../components/PortfolioList";
 import Intro from "../components/Intro";
 import Layout from "../components/Layout";
-import { getAllPosts } from "../lib/api";
+import { getPostsByType } from "../lib/api";
 import Head from "next/head";
 import Post from "../types/post";
 
 type Props = {
-  allPosts: Post[];
+  workPosts: Post[];
+  funPosts: Post[];
 };
 
-const Index = ({ allPosts }: Props) => {
-  const workPosts = allPosts.filter((post) => post.type == "work");
-  const funPosts = allPosts.filter((post) => post.type == "fun");
-
+const Index = ({ workPosts, funPosts }: Props) => {
   return (
     <>
       <Layout>
@@ -37,18 +35,26 @@ const Index = ({ allPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const allPosts = await getAllPosts([
+  const workPosts = await getPostsByType("work", [
     "title",
-    "type",
     "date",
     "slug",
     "tags",
     "content",
+    "published",
+  ]);
+  const funPosts = await getPostsByType("fun", [
+    "title",
+    "date",
+    "slug",
+    "tags",
+    "content",
+    "published",
   ]);
 
   // console.log(allPosts);
 
   return {
-    props: { allPosts },
+    props: { workPosts, funPosts },
   };
 };

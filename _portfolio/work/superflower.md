@@ -1,6 +1,4 @@
 ---
-type: work
-
 project-link: https://superflowerstudio.com/
 title: "Superflower Studio"
 date: "November 2019"

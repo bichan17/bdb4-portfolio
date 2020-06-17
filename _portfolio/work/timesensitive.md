@@ -1,6 +1,4 @@
 ---
-type: work
-
 project-link: https://timesensitive.fm/
 title: "Time Sensitive Podcast"
 date: "November 2019"

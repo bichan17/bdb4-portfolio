@@ -1,6 +1,4 @@
 ---
-type: fun
-
 project-link: http://wienchimes.com/
 title: "Wienchimes"
 date: "Feb 2017"

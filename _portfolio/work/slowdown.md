@@ -1,6 +1,4 @@
 ---
-type: work
-
 project-link: https://slowdown.tv/
 title: "Slowdown.tv"
 date: "Feburary 2019"

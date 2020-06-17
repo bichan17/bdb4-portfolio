@@ -1,6 +1,4 @@
 ---
-type: fun
-
 project-link: http://stickywaffle.com/
 title: "Sticky Waffle"
 date: "august 2014"

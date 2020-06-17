@@ -1,5 +1,4 @@
 ---
-type: work
 project-link: https://andrewzuckerman.com/
 title: "Andrew Zuckerman"
 date: "Feburary 2019"

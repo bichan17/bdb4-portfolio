@@ -1,6 +1,4 @@
 ---
-type: work
-
 project-link: http://ooluroo.com
 title: "Ooluroo"
 date: "Feb 2016"

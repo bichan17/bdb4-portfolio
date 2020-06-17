@@ -1,6 +1,4 @@
 ---
-type: work
-
 project-link: https://members.marriott.com/
 title: "Marriott Members"
 date: "April 2018"
