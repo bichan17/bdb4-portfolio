@@ -8,24 +8,11 @@ type Props = {
   title: string;
   date: string;
   slug: string;
+  tags: Array<string>;
   content: string;
 };
 
-const PortfolioItem = ({ title, date, slug, content }: Props) => {
-  // console.log(content);
-
-  // const [parsedContent, setContent] = useState();
-
-  // useEffect(() => {
-  //   const parseMarkdown = async () => {
-  //     const result: string = await markdownToHtml(content || "");
-
-  //     setContent(result);
-  //   };
-
-  //   parseMarkdown();
-  // }, []);
-
+const PortfolioItem = ({ title, date, slug, tags, content }: Props) => {
   return (
     <div>
       <h3>
@@ -38,6 +25,7 @@ const PortfolioItem = ({ title, date, slug, content }: Props) => {
         className={markdownStyles["markdown"]}
         dangerouslySetInnerHTML={{ __html: content }}
       />
+      {tags && <div>{tags.toString().replace(/,/g, ", ")}</div>}
     </div>
   );
 };

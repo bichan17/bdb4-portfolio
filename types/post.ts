@@ -3,6 +3,7 @@ type PostType = {
   title: string;
   date: string;
   type: string;
+  tags: Array<string>;
   content: string;
 };
 
