@@ -21,7 +21,7 @@ export async function getPostBySlug(
   const parsedMarkdown = await markdownToHtml(content || "");
 
   type Items = {
-    [key: string]: string;
+    [key: string]: any;
   };
 
   const items: Items = {};
@@ -32,6 +32,7 @@ export async function getPostBySlug(
       items[field] = realSlug;
     }
     if (field === "content") {
+      // items[field] = content;
       items[field] = parsedMarkdown;
     }
 
@@ -40,16 +41,22 @@ export async function getPostBySlug(
     }
   });
 
+  if (typeof data.published === "undefined" || data.published !== false) {
+    items.published = true;
+  } else {
+    items.published = false;
+  }
   return items;
 }
 
 export function getPostsByType(type: string, fields: string[] = []) {
   const slugs = getPostSlugsByType(type);
 
-  const promises = slugs.map(async (slug) => {
+  const posts = slugs.map(async (slug) => {
     const post = await getPostBySlug(type, slug, fields);
     return post;
   });
-  // .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return Promise.all(promises);
+  return Promise.all(posts).then((renderedPosts) => {
+    return renderedPosts.filter((post) => post.published);
+  });
 }
