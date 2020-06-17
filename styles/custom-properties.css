@@ -2,14 +2,9 @@
   --font-family-sans: "Founders Grotesk Regular", sans-serif;
 
   --color-black: #000000;
-  --color-dark-gray: #32373e;
-  --color-very-light-gray: #e7ebed;
+  --color-gray: #e7ebed;
   --color-white: #fff;
-  --color-accent: #707070;
-
-  --color-light-gray: #b7b7b7;
-  --color-gray: #e2e2e2;
-  --color-highlight-yellow: #e1ff4b;
+  --color-yellow: #f9e248;
   --color-pink: #dd03c4;
 
   --color-link-hover: var(--color-pink);
@@ -25,7 +20,4 @@
   /* --layout-max-width: 1440px; */
   --layout-max-width: 1920px;
   --layout-gutter-width: 3.2rem;
-
-  --layout-text-max-width: 62.4rem;
-  --layout-text-max-width-wide: 104.5rem;
 }

@@ -1,0 +1,42 @@
+@import "./custom-properties.css";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+a,
+button {
+  color: var(--color-yellow);
+}
+@media (hover: hover) and (pointer: fine) {
+  a,
+  button {
+    &:hover {
+      color: var(--color-link-hover);
+      & svg {
+        fill: var(--color-link-hover);
+      }
+    }
+  }
+}
+p {
+  margin: 3rem 0;
+}
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0;
+
+  & svg {
+    display: block;
+    fill: inherit;
+  }
+}
