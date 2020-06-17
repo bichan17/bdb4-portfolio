@@ -2,13 +2,14 @@ import PortfolioItem from "./PortfolioItem";
 import Post from "../types/post";
 
 type Props = {
+  title: string;
   posts: Post[];
 };
 
-const MoreStories = ({ posts }: Props) => {
+const PortfolioList = ({ title, posts }: Props) => {
   return (
     <section>
-      <h2>Work</h2>
+      <h2>{title}</h2>
       <div>
         {posts.map((post) => (
           <PortfolioItem
@@ -24,4 +25,4 @@ const MoreStories = ({ posts }: Props) => {
   );
 };
 
-export default MoreStories;
+export default PortfolioList;

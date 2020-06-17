@@ -11,6 +11,9 @@ type Props = {
 };
 
 const Index = ({ allPosts }: Props) => {
+  const workPosts = allPosts.filter((post) => post.type == "work");
+  const funPosts = allPosts.filter((post) => post.type == "fun");
+
   return (
     <>
       <Layout>
@@ -19,7 +22,12 @@ const Index = ({ allPosts }: Props) => {
         </Head>
         <Container>
           <Intro />
-          {allPosts.length > 0 && <PortfolioList posts={allPosts} />}
+          {workPosts.length > 0 && (
+            <PortfolioList title="Work" posts={workPosts} />
+          )}
+          {funPosts.length > 0 && (
+            <PortfolioList title="Fun Stuff" posts={funPosts} />
+          )}
         </Container>
       </Layout>
     </>
@@ -29,7 +37,13 @@ const Index = ({ allPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const allPosts = await getAllPosts(["title", "date", "slug", "content"]);
+  const allPosts = await getAllPosts([
+    "title",
+    "type",
+    "date",
+    "slug",
+    "content",
+  ]);
 
   // console.log(allPosts);
 

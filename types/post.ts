@@ -1,9 +1,8 @@
-import Author from "./author";
-
 type PostType = {
   slug: string;
   title: string;
   date: string;
+  type: string;
   content: string;
 };
 
