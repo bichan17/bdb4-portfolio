@@ -18,6 +18,7 @@
     "react-dom": "^16.13.0",
     "remark": "11.0.2",
     "remark-html": "10.0.0",
+    "remark-external-links": "^6.1.0",
     "typescript": "^3.9.2"
   },
   "devDependencies": {
