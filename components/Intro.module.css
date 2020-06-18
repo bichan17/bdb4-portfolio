@@ -8,7 +8,7 @@
     font-size: var(--font-massive-size);
     padding: 0 var(--layout-gutter-width-desktop);
   }
-  & h1 {
+  & h2 {
     font-size: var(--font-huge-size);
     @media (--media-min-small) {
       font-size: var(--font-largest-size);

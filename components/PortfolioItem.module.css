@@ -2,11 +2,17 @@
 @import "../styles/custom-properties.css";
 
 .root {
+  margin-bottom: 4.5rem;
+  @media (--media-min-small) {
+    margin-bottom: 5.5rem;
+  }
 }
 
 .projectTitle {
+  margin: 0 0 1.7rem;
   font-size: var(--font-large-size);
   @media (--media-min-small) {
+    margin: 0 0 2.3rem;
     font-size: var(--font-huge-size);
   }
   & a {

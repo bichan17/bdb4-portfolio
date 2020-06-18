@@ -14,8 +14,12 @@
 }
 
 .listTitle {
+  margin: 0 0 5.9rem;
   font-size: var(--font-base-size);
+  line-height: var(--font-base-line-height);
   @media (--media-min-small) {
+    margin: 0 0 9rem;
     font-size: var(--font-large-size);
+    line-height: var(--font-large-line-height);
   }
 }

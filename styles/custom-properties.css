@@ -11,22 +11,22 @@
 
   /* Typography */
   --font-small-size: 1.4rem;
-  --font-small-line-height: 1.44;
+  --font-small-line-height: 1.3;
 
   --font-base-size: 1.8rem;
-  --font-base-line-height: 1.44;
+  --font-base-line-height: 1.3;
 
   --font-large-size: 2.4rem;
   --font-large-line-height: 1.3;
 
   --font-huge-size: 3.2rem;
-  --font-huge-line-height: 1.2;
+  --font-huge-line-height: 1.3;
 
   --font-massive-size: 4.2rem;
-  --font-massive-line-height: 1.2;
+  --font-massive-line-height: 1.3;
 
   --font-largest-size: 6.4rem;
-  --font-largest-line-height: 1.2;
+  --font-largest-line-height: 1.3;
 
   /* layout */
   /* --layout-max-width: 1440px; */
