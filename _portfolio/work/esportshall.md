@@ -1,5 +1,5 @@
 ---
-project-link: http://www.esportshall.com/
+project_link: http://www.esportshall.com/
 title: "Esports Hall of Fame"
 date: "august 2016"
 published: false

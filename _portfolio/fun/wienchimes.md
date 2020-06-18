@@ -1,5 +1,5 @@
 ---
-project-link: http://wienchimes.com/
+project_link: http://wienchimes.com/
 title: "Wienchimes"
 date: "Feb 2017"
 ---

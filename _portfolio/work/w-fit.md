@@ -1,5 +1,5 @@
 ---
-project-link: http://www.whotelsfit.com/
+project_link: http://www.whotelsfit.com/
 title: "W Hotels FIT"
 date: "june 2015"
 published: false

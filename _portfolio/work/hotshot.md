@@ -1,5 +1,5 @@
 ---
-project-link: http://www.teamhotshot.com/
+project_link: http://www.teamhotshot.com/
 title: "TeamHOTSHOT"
 date: "june 2016"
 published: false

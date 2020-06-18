@@ -1,5 +1,5 @@
 ---
-project-link: https://timesensitive.fm/
+project_link: https://timesensitive.fm/
 title: "Time Sensitive Podcast"
 date: "November 2019"
 ---

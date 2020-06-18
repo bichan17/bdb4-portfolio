@@ -1,5 +1,5 @@
 ---
-project-link: http://dailyrush.us/
+project_link: http://dailyrush.us/
 title: "Daily Rush"
 date: "September 2019"
 tags:

@@ -1,5 +1,5 @@
 ---
-project-link: http://vimeo.com/95558093
+project_link: http://vimeo.com/95558093
 title: "Wanderlust"
 date: "may 2014"
 ---

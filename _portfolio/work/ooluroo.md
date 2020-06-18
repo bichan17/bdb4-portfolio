@@ -1,5 +1,5 @@
 ---
-project-link: http://ooluroo.com
+project_link: http://ooluroo.com
 title: "Ooluroo"
 date: "Feb 2016"
 published: false

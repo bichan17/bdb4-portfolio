@@ -1,5 +1,5 @@
 ---
-project-link: https://superflowerstudio.com/
+project_link: https://superflowerstudio.com/
 title: "Superflower Studio"
 date: "November 2019"
 ---

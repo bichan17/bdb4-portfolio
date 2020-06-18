@@ -16,6 +16,7 @@ const PortfolioList = ({ title, posts }: Props) => {
             key={post.slug}
             title={post.title}
             date={post.date}
+            project_link={post.project_link}
             slug={post.slug}
             tags={post.tags}
             content={post.content}

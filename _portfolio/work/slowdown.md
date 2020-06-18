@@ -1,5 +1,5 @@
 ---
-project-link: https://slowdown.tv/
+project_link: https://slowdown.tv/
 title: "Slowdown.tv"
 date: "Feburary 2019"
 published: false

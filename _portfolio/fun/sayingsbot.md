@@ -1,5 +1,5 @@
 ---
-project-link: https://twitter.com/sayingsbot
+project_link: https://twitter.com/sayingsbot
 title: "Sayings Bot"
 date: "Oct 2016"
 ---

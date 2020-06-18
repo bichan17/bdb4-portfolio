@@ -1,5 +1,5 @@
 ---
-project-link: http://stickywaffle.com/
+project_link: http://stickywaffle.com/
 title: "Sticky Waffle"
 date: "august 2014"
 ---
