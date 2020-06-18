@@ -10,14 +10,28 @@
   --color-link-hover: var(--color-pink);
 
   /* Typography */
+  --font-small-size: 1.4rem;
+  --font-small-line-height: 1.44;
 
-  --font-base-size-mobile: 1.8rem;
-  --font-base-line-height-mobile: 1.44;
-  --font-base-size-desktop: 2.4rem;
-  --font-base-line-height-desktop: 1.2;
+  --font-base-size: 1.8rem;
+  --font-base-line-height: 1.44;
+
+  --font-large-size: 2.4rem;
+  --font-large-line-height: 1.2;
+
+  --font-huge-size: 3.2rem;
+  --font-huge-line-height: 1.2;
+
+  --font-massive-size: 4.2rem;
+  --font-massive-line-height: 1.2;
+
+  --font-largest-size: 6.4rem;
+  --font-largest-line-height: 1.2;
 
   /* layout */
   /* --layout-max-width: 1440px; */
   --layout-max-width: 1920px;
-  --layout-gutter-width: 3.2rem;
+
+  --layout-gutter-width: 2.2rem;
+  --layout-gutter-width-desktop: 3.2rem;
 }

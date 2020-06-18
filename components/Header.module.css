@@ -2,16 +2,13 @@
 @import "../styles/custom-properties.css";
 
 .root {
-  font-size: var(--font-large-size);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
   padding: 0 var(--layout-gutter-width);
   @media (--media-min-small) {
-    font-size: var(--font-massive-size);
     padding: 0 var(--layout-gutter-width-desktop);
-  }
-  & h1 {
-    font-size: var(--font-huge-size);
-    @media (--media-min-small) {
-      font-size: var(--font-largest-size);
-    }
   }
 }

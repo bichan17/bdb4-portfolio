@@ -17,10 +17,10 @@ body {
   background: var(--color-black);
   color: var(--color-white);
   margin: 0;
-  font-size: var(--font-base-size-mobile);
-  line-height: var(--font-base-line-height-mobile);
+  font-size: var(--font-base-size);
+  line-height: var(--font-base-line-height);
   @media (--media-min-small) {
-    font-size: var(--font-base-size-desktop);
-    line-height: var(--font-base-line-height-desktop);
+    font-size: var(--font-large-size);
+    line-height: var(--font-large-line-height);
   }
 }

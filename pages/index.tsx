@@ -2,6 +2,7 @@ import Container from "../components/Container";
 import PortfolioList from "../components/PortfolioList";
 import Intro from "../components/Intro";
 import Layout from "../components/Layout";
+import Header from "../components/Header";
 import { getPostsByType } from "../lib/api";
 import Head from "next/head";
 import Post from "../types/post";
@@ -19,6 +20,7 @@ const Index = ({ workPosts, funPosts }: Props) => {
           <title>Eric Bichan</title>
         </Head>
         <Container>
+          <Header />
           <Intro />
           {workPosts.length > 0 && (
             <PortfolioList title="Work" posts={workPosts} />
@@ -35,7 +37,7 @@ const Index = ({ workPosts, funPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const fields = ["title", "date", "slug", "tags", "content", "published"];
+  const fields = ["title", "date", "slug", "tags", "content"];
   const workPosts = await getPostsByType("work", fields);
   const funPosts = await getPostsByType("fun", fields);
 

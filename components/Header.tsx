@@ -1,13 +1,11 @@
-import Link from "next/link";
+import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <h2>
-      <Link href="/">
-        <a>Blog</a>
-      </Link>
-      .
-    </h2>
+    <section className={styles.root}>
+      <h1>Eric Bichan</h1>
+      <a href="#">Email</a>
+    </section>
   );
 };
 
