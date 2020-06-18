@@ -1,0 +1,25 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
+.root {
+}
+
+.projectTitle {
+  font-size: var(--font-large-size);
+  @media (--media-min-small) {
+    font-size: var(--font-huge-size);
+  }
+  & a {
+    color: var(--color-white);
+  }
+  & a:hover {
+    color: var(--color-pink);
+  }
+}
+.tags {
+  font-size: var(--font-small-size);
+  color: var(--color-gray);
+  @media (--media-min-small) {
+    font-size: 2rem;
+  }
+}

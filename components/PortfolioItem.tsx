@@ -1,4 +1,5 @@
 import markdownStyles from "./markdown-styles.module.css";
+import styles from "./PortfolioItem.module.css";
 
 type Props = {
   title: string;
@@ -11,8 +12,8 @@ type Props = {
 
 const PortfolioItem = ({ title, project_link, tags, content }: Props) => {
   return (
-    <div>
-      <h3>
+    <div className={styles.root}>
+      <h3 className={styles.projectTitle}>
         <a className="hover:underline" href={project_link} target="_blank">
           {title}
         </a>
@@ -21,7 +22,9 @@ const PortfolioItem = ({ title, project_link, tags, content }: Props) => {
         className={markdownStyles["markdown"]}
         dangerouslySetInnerHTML={{ __html: content }}
       />
-      {tags && <div>{tags.toString().replace(/,/g, ", ")}</div>}
+      {tags && (
+        <div className={styles.tags}>{tags.toString().replace(/,/g, ", ")}</div>
+      )}
     </div>
   );
 };

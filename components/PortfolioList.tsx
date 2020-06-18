@@ -1,5 +1,6 @@
 import PortfolioItem from "./PortfolioItem";
 import Post from "../types/post";
+import styles from "./PortfolioList.module.css";
 
 type Props = {
   title: string;
@@ -8,8 +9,8 @@ type Props = {
 
 const PortfolioList = ({ title, posts }: Props) => {
   return (
-    <section>
-      <h2>{title}</h2>
+    <section className={styles.root}>
+      <h2 className={styles.listTitle}>{title}</h2>
       <div>
         {posts.map((post) => (
           <PortfolioItem
