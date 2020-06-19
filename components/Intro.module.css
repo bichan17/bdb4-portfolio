@@ -14,10 +14,22 @@
     font-size: var(--font-massive-size);
   }
   & h2 {
+    line-height: 1;
+    margin: 0 0 4rem;
     font-size: var(--font-huge-size);
     @media (--media-min-small) {
+      margin: 0 0 5.6rem;
       font-size: var(--font-largest-size);
     }
+  }
+  & p {
+    margin: 0 0 4rem;
+    @media (--media-min-small) {
+      margin: 0 0 5.6rem;
+    }
+  }
+  & p:last-child {
+    margin-bottom: 0;
   }
 }
 .textWrapper {
