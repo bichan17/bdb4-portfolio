@@ -10,19 +10,21 @@ type Props = {
 const PortfolioList = ({ title, posts }: Props) => {
   return (
     <section className={styles.root}>
-      <h2 className={styles.listTitle}>{title}</h2>
-      <div>
-        {posts.map((post) => (
-          <PortfolioItem
-            key={post.slug}
-            title={post.title}
-            date={post.date}
-            project_link={post.project_link}
-            slug={post.slug}
-            tags={post.tags}
-            content={post.content}
-          />
-        ))}
+      <div className={styles.wrapper}>
+        <h2 className={styles.listTitle}>{title}</h2>
+        <div>
+          {posts.map((post) => (
+            <PortfolioItem
+              key={post.slug}
+              title={post.title}
+              date={post.date}
+              project_link={post.project_link}
+              slug={post.slug}
+              tags={post.tags}
+              content={post.content}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,16 +1,23 @@
 @import "../styles/custom-media.css";
 @import "../styles/custom-properties.css";
+@import "../styles/twelve-col.css";
 
 .root {
   margin-bottom: 14rem;
   padding: 0 var(--layout-gutter-width);
   @media (--media-min-small) {
+    @apply --twelve-col;
     margin-bottom: 21rem;
-    padding: 0 var(--layout-gutter-width-desktop);
   }
 }
 .root:last-child {
   margin-bottom: 0;
+}
+
+.wrapper {
+  @media (--media-min-small) {
+    @apply --twelve-col-inner;
+  }
 }
 
 .listTitle {
