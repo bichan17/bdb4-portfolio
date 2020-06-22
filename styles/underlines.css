@@ -7,7 +7,7 @@
       var(--color-yellow) 100%,
       var(--color-yellow) 100%
     );
-    background-position: 0 1.07em;
+    background-position: 0 var(--underline-distance);
     background-repeat: repeat-x;
     background-size: 1px 1px;
   }
@@ -17,7 +17,7 @@
       var(--color-white) 100%,
       var(--color-white) 100%
     );
-    background-position: 0 1.07em;
+    background-position: 0 var(--underline-distance);
     background-repeat: repeat-x;
     background-size: 1px 1px;
   }
@@ -27,7 +27,7 @@
       var(--color-link-hover) 100%,
       var(--color-link-hover) 100%
     );
-    background-position: 0 1.07em;
+    background-position: 0 var(--underline-distance);
     background-repeat: repeat-x;
     background-size: 1px 1px;
   }
