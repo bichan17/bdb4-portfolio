@@ -24,6 +24,10 @@
   }
   & a:hover {
     color: var(--color-pink);
+    & .projectTitleText {
+      @apply --solid-underline-hover;
+      color: var(--color-link-hover);
+    }
   }
 }
 .projectTitleText {

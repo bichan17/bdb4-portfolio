@@ -17,6 +17,11 @@
   padding: 0;
 }
 .markdown li {
+  &:hover {
+    &:before {
+      color: var(--color-link-hover);
+    }
+  }
   &:before {
     content: "-";
     margin-left: 0;
