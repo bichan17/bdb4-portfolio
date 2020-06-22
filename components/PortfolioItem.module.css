@@ -1,5 +1,6 @@
 @import "../styles/custom-media.css";
 @import "../styles/custom-properties.css";
+@import "../styles/underlines.css";
 
 .root {
   margin-bottom: 4.5rem;
@@ -16,10 +17,31 @@
     font-size: var(--font-huge-size);
   }
   & a {
+    display: inline-flex;
+    align-items: center;
     color: var(--color-white);
+    background-image: none;
   }
   & a:hover {
     color: var(--color-pink);
+  }
+}
+.projectTitleText {
+  @apply --solid-underline-white;
+  &:hover {
+    @apply --solid-underline-hover;
+    color: var(--color-link-hover);
+    & svg {
+      fill: var(--color-link-hover);
+    }
+  }
+}
+.arrowIcon {
+  font-size: 2.1rem;
+  margin-left: 1.4rem;
+  @media (--media-min-small) {
+    font-size: 2.5rem;
+    margin-left: 1.9rem;
   }
 }
 .tags {

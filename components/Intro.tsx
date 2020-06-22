@@ -16,7 +16,9 @@ const Intro = () => {
         </p>
 
         <p>
-          Want to make something cool? Feel free to <a href="#">reach out</a>.
+          Want to make something cool?
+          <br />
+          Feel free to <a href="#">reach out</a>.
         </p>
       </div>
     </section>

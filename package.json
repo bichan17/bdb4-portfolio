@@ -16,9 +16,10 @@
     "next-fonts": "^1.1.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-icons": "^3.10.0",
     "remark": "11.0.2",
-    "remark-html": "10.0.0",
     "remark-external-links": "^6.1.0",
+    "remark-html": "10.0.0",
     "typescript": "^3.9.2"
   },
   "devDependencies": {
