@@ -1,13 +1,11 @@
-import Container from "./Container";
+import styles from "./Footer.module.css";
+import { EMAIL_ADDRESS } from "../lib/constants";
 
 const Footer = () => {
   return (
-    <footer className="">
-      <Container>
-        <div className="">
-          <h3 className="">Footer</h3>
-        </div>
-      </Container>
+    <footer className={styles.root}>
+      <a href={`mailto:${EMAIL_ADDRESS}`}>Contact</a>
+      <a href="#">Resume</a>
     </footer>
   );
 };

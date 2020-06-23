@@ -1,0 +1,24 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 14rem 0 5rem;
+  @media (--media-min-small) {
+    flex-direction: row;
+  }
+  & a {
+    display: inline-block;
+    margin-bottom: 2rem;
+    @media (--media-min-small) {
+      margin-bottom: 0;
+      margin-right: 2rem;
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
