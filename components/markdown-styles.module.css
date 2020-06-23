@@ -17,6 +17,7 @@
   padding: 0;
 }
 .markdown li {
+  display: table;
   &:hover {
     &:before {
       color: var(--color-link-hover);
