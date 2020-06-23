@@ -1,4 +1,5 @@
 import styles from "./Intro.module.css";
+import { EMAIL_ADDRESS } from "../lib/constants";
 
 const Intro = () => {
   return (
@@ -18,7 +19,7 @@ const Intro = () => {
         <p>
           Want to make something cool?
           <br />
-          Feel free to <a href="#">reach out</a>.
+          Feel free to <a href={`mailto:${EMAIL_ADDRESS}`}>reach out</a>.
         </p>
       </div>
     </section>
