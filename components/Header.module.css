@@ -8,6 +8,7 @@
   background-color: var(--color-black);
   padding: 0 var(--layout-gutter-width);
   @media (--media-min-small) {
+    position: absolute;
     background-color: transparent;
     padding: 0 5rem;
   }
@@ -38,6 +39,9 @@
   display: flex;
   font-size: 3.2rem;
   @media (--media-min-small) {
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
     font-size: 4.8rem;
   }
 }
