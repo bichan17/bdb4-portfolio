@@ -1,6 +1,6 @@
 @import "../styles/custom-media.css";
 @import "../styles/custom-properties.css";
-@import "../styles/underlines.css";
+@import "../styles/effects.css";
 
 .root {
   margin-bottom: 4.5rem;
@@ -23,10 +23,9 @@
     background-image: none;
   }
   & a:hover {
-    color: var(--color-pink);
+    @apply --effect-rainbow-hover;
     & .projectTitleText {
       @apply --solid-underline-hover;
-      color: var(--color-link-hover);
     }
   }
 }

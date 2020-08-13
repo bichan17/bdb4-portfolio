@@ -1,6 +1,7 @@
 @import "../styles/custom-media.css";
 @import "../styles/custom-properties.css";
 @import "../styles/twelve-col.css";
+@import "../styles/effects.css";
 
 .root {
   height: 100vh;

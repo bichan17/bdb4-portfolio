@@ -1,5 +1,5 @@
 @import "./custom-properties.css";
-@import "./underlines.css";
+@import "./effects.css";
 
 h1,
 h2,
@@ -13,18 +13,25 @@ h6 {
 }
 a,
 button {
-  @apply --solid-underline;
+  /* @apply --solid-underline; */
   text-decoration: none;
   color: var(--color-yellow);
+  & > span {
+    @apply --solid-underline;
+  }
 }
+
 @media (hover: hover) and (pointer: fine) {
   a,
   button {
     &:hover {
-      @apply --solid-underline-hover;
+      @apply --effect-rainbow-hover;
       color: var(--color-link-hover);
       & svg {
         fill: var(--color-link-hover);
+      }
+      & > span {
+        @apply --solid-underline-hover;
       }
     }
   }

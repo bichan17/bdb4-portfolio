@@ -9,17 +9,28 @@ const Intro = () => {
         <p>
           I’m Eric Bichan, a web developer based in Brooklyn, NY, specializing
           in projects in the arts and media space. Here is my{" "}
-          <a href="#">resume</a>.
+          <a href="#">
+            <span>resume</span>
+          </a>
+          .
         </p>
 
         <p>
-          I am currently freelance, previously with <a href="#">BBH NY</a>.
+          I am currently freelance, previously with{" "}
+          <a href="#">
+            <span>BBH NY</span>
+          </a>
+          .
         </p>
 
         <p>
           Want to make something cool?
           <br />
-          Feel free to <a href={`mailto:${EMAIL_ADDRESS}`}>reach out</a>.
+          Feel free to{" "}
+          <a href={`mailto:${EMAIL_ADDRESS}`}>
+            <span>reach out</span>
+          </a>
+          .
         </p>
       </div>
     </section>

@@ -1,6 +1,7 @@
 import markdownStyles from "./markdown-styles.module.css";
 import styles from "./PortfolioItem.module.css";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import ReactDOM from "react-dom";
 
 type Props = {
   title: string;
