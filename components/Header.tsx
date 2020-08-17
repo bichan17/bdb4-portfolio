@@ -1,6 +1,9 @@
-import styles from "./Header.module.css";
 import { MdMailOutline } from "react-icons/md";
+import { cn } from "../lib/helpers";
 import { EMAIL_ADDRESS } from "../lib/constants";
+import icons from "../styles/icons.module.css";
+
+import styles from "./Header.module.css";
 
 const Header = () => {
   return (
@@ -8,7 +11,7 @@ const Header = () => {
       <div className={styles.wrapper}>
         <h1 className={styles.name}>Eric Bichan</h1>
         <a className={styles.mailLink} href={`mailto:${EMAIL_ADDRESS}`}>
-          <MdMailOutline />
+          <span className={cn(icons.bdbIcon, icons.iconMailOutline)}></span>
         </a>
       </div>
     </section>

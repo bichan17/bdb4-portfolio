@@ -4,8 +4,12 @@ import { EMAIL_ADDRESS } from "../lib/constants";
 const Footer = () => {
   return (
     <footer className={styles.root}>
-      <a href={`mailto:${EMAIL_ADDRESS}`}>Contact</a>
-      <a href="#">Resume</a>
+      <a href={`mailto:${EMAIL_ADDRESS}`}>
+        <span>Contact</span>
+      </a>
+      <a href="#">
+        <span>Resume</span>
+      </a>
     </footer>
   );
 };

@@ -1,7 +1,7 @@
+import { cn } from "../lib/helpers";
 import markdownStyles from "./markdown-styles.module.css";
 import styles from "./PortfolioItem.module.css";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import ReactDOM from "react-dom";
+import icons from "../styles/icons.module.css";
 
 type Props = {
   title: string;
@@ -18,7 +18,13 @@ const PortfolioItem = ({ title, project_link, tags, content }: Props) => {
       <h3 className={styles.projectTitle}>
         <a className="hover:underline" href={project_link} target="_blank">
           <span className={styles.projectTitleText}>{title}</span>
-          <FaLongArrowAltRight className={styles.arrowIcon} />
+          <span
+            className={cn(
+              styles.arrowIcon,
+              icons.bdbIcon,
+              icons.iconArrowRight
+            )}
+          ></span>
         </a>
       </h3>
       <div

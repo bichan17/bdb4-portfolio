@@ -40,10 +40,10 @@
   }
 }
 .arrowIcon {
-  font-size: 2.1rem;
+  font-size: 3rem;
   margin-left: 1.4rem;
   @media (--media-min-small) {
-    font-size: 2.5rem;
+    font-size: 3.6rem;
     margin-left: 1.9rem;
   }
 }
