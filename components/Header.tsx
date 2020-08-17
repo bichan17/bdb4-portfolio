@@ -1,4 +1,3 @@
-import { MdMailOutline } from "react-icons/md";
 import { cn } from "../lib/helpers";
 import { EMAIL_ADDRESS } from "../lib/constants";
 import icons from "../styles/icons.module.css";
