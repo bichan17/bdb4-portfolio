@@ -12,10 +12,10 @@
   }
   & a {
     display: inline-block;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     @media (--media-min-small) {
       margin-bottom: 0;
-      margin-right: 2rem;
+      margin-right: 6rem;
     }
     &:last-child {
       margin: 0;

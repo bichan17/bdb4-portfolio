@@ -4,6 +4,7 @@ title: "Andrew Zuckerman"
 date: "Feburary 2019"
 tags:
   - Wordpress
+  - Woocommerce
   - PHP
 ---
 

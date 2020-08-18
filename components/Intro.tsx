@@ -1,5 +1,5 @@
 import styles from "./Intro.module.css";
-import { EMAIL_ADDRESS } from "../lib/constants";
+import { EMAIL_ADDRESS, RESUME } from "../lib/constants";
 
 const Intro = () => {
   return (
@@ -9,7 +9,7 @@ const Intro = () => {
         <p>
           I’m Eric Bichan, a web developer based in Brooklyn, NY, specializing
           in projects in the arts and media space. Here is my{" "}
-          <a href="#">
+          <a rel="nofollow" target="_blank" href={RESUME}>
             <span>resume</span>
           </a>
           .
@@ -17,7 +17,11 @@ const Intro = () => {
 
         <p>
           I am currently freelance, previously with{" "}
-          <a href="#">
+          <a
+            rel="nofollow"
+            target="_blank"
+            href="https://newyork.bartleboglehegarty.com/"
+          >
             <span>BBH NY</span>
           </a>
           .
@@ -27,7 +31,7 @@ const Intro = () => {
           Want to make something cool?
           <br />
           Feel free to{" "}
-          <a href={`mailto:${EMAIL_ADDRESS}`}>
+          <a rel="nofollow" target="_blank" href={`mailto:${EMAIL_ADDRESS}`}>
             <span>reach out</span>
           </a>
           .

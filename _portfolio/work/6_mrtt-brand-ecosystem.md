@@ -2,7 +2,13 @@
 project_link: https://the-luxury-collection.starwoodhotels.com/
 title: "Marriott Brand Ecosystem"
 date: "December 2017"
+tags:
+  - Wordpress
+  - ACF
+  - PHP
 ---
+
+The Marriott Brand Ecosystem is the framework built to power the relaunching of Marriott Hotels brand sites. All of the brand sites share the same extendable modular codebase built on top of Wordpress which makes production faster and the brand websites easily maintained. This project was created at [BBH NY][bbh] and I contributed to it heavily during my time there.
 
 - [Luxury Collection Hotels][lc]
 - [W Hotels][w]
@@ -12,8 +18,6 @@ date: "December 2017"
 - [St. Regis Hotels][sr]
 - [Element Hotels][el]
 
-The Marriott Brand Ecosystem project is an extendable component based reusable framework built on top of Wordpress to power the relaunching of Marriott brand sites and make production faster and more easily maintained. This project is currently ongoing at BBH NY and I contributed to it heavily during my time there.
-
 [lc]: https://the-luxury-collection.starwoodhotels.com/
 [aloft]: http://aloft-hotels.starwoodhotels.com/
 [fp]: http://four-points.starwoodhotels.com/
@@ -21,3 +25,4 @@ The Marriott Brand Ecosystem project is an extendable component based reusable f
 [sr]: https://st-regis.marriott.com/
 [el]: https://element-hotels.marriott.com/
 [w]: https://w-hotels.marriott.com/
+[bbh]: https://newyork.bartleboglehegarty.com/

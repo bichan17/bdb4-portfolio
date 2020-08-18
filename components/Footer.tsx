@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import { EMAIL_ADDRESS } from "../lib/constants";
+import { EMAIL_ADDRESS, RESUME } from "../lib/constants";
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       <a href={`mailto:${EMAIL_ADDRESS}`}>
         <span>Contact</span>
       </a>
-      <a href="#">
+      <a href={RESUME}>
         <span>Resume</span>
       </a>
     </footer>
