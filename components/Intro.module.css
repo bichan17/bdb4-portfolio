@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   font-size: var(--font-large-size);
+  line-height: 1.4;
   padding: 0 var(--layout-gutter-width);
   @media (--media-min-small) {
     @apply --twelve-col;
@@ -24,9 +25,9 @@
     }
   }
   & p {
-    margin: 0 0 4rem;
+    margin: 0 0 2.5rem;
     @media (--media-min-small) {
-      margin: 0 0 5.6rem;
+      margin: 0 0 4rem;
     }
   }
   & p:last-child {
