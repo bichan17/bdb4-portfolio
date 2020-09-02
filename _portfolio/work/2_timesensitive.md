@@ -8,4 +8,4 @@ tags:
   - PHP
 ---
 
-The Time Sensitive podcast's goal is to not only provide an interesting and thought provoking interview, but to deliver a media-rich experience, adding a visual element to each episode. This site is the home for those experiences. The backend is made with Wordpress and each episode can be made in a modular style, allowing them to be built with images and related content interwoven into the transcript.
+Time Sensitive is a podcast that features candid, revealing interviews with people who have a distinct perspective on time. The site delivers a media-rich experience, adding visual elements to each episode. The backend is made with Wordpress. Each episode can be made in a modular style, with images and related content interwoven throughout the transcript.

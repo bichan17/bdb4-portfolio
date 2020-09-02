@@ -7,8 +7,8 @@ const Intro = () => {
       <div className={styles.textWrapper}>
         <h2>Hi, how are you?</h2>
         <p>
-          I’m Eric Bichan, a web developer based in Brooklyn, NY, specializing
-          in projects in the arts and media space. Here is my{" "}
+          I’m Eric Bichan, a web developer based in Brooklyn, specializing in
+          projects in the arts and media space. Here is my{" "}
           <a rel="nofollow" target="_blank" href={RESUME}>
             <span>resume</span>
           </a>
@@ -28,7 +28,7 @@ const Intro = () => {
         </p>
 
         <p>
-          Want to make something cool?
+          Want to make something cool together?
           <br />
           Feel free to{" "}
           <a rel="nofollow" target="_blank" href={`mailto:${EMAIL_ADDRESS}`}>

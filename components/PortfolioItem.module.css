@@ -48,7 +48,7 @@
   }
 }
 .tags {
-  font-size: var(--font-small-size);
+  /* font-size: var(--font-small-size); */
   color: var(--color-gray);
   @media (--media-min-small) {
     font-size: 2rem;
