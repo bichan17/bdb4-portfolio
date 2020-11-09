@@ -16,7 +16,7 @@ const PortfolioItem = ({ title, project_link, tags, content }: Props) => {
   return (
     <div className={styles.root}>
       <h3 className={styles.projectTitle}>
-        <a className="hover:underline" href={project_link} target="_blank">
+        <a href={project_link} target="_blank">
           <span className={styles.projectTitleText}>{title}</span>
           <span
             className={cn(

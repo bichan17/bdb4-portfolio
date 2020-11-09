@@ -27,6 +27,17 @@
     & .projectTitleText {
       @apply --solid-underline-hover;
     }
+    & .arrowIcon {
+      transition: all 0.35s ease;
+
+      animation-duration: 0.35s;
+      animation-name: bounce-small;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      @media (--media-min-small) {
+        animation-name: bounce;
+      }
+    }
   }
 }
 .projectTitleText {
@@ -40,6 +51,7 @@
   }
 }
 .arrowIcon {
+  transition: all 0.35s ease;
   font-size: 3rem;
   margin-left: 1.4rem;
   @media (--media-min-small) {
@@ -52,5 +64,24 @@
   color: var(--color-gray);
   @media (--media-min-small) {
     font-size: 2rem;
+  }
+}
+
+@keyframes bounce-small {
+  from {
+    margin-left: 1.4rem;
+  }
+
+  to {
+    margin-left: 1.9rem;
+  }
+}
+@keyframes bounce {
+  from {
+    margin-left: 1.9rem;
+  }
+
+  to {
+    margin-left: 2.6rem;
   }
 }

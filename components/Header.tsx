@@ -10,7 +10,9 @@ const Header = () => {
       <div className={styles.wrapper}>
         <h1 className={styles.name}>Eric Bichan</h1>
         <a className={styles.mailLink} href={`mailto:${EMAIL_ADDRESS}`}>
-          <span className={cn(icons.bdbIcon, icons.iconMailOutline)}></span>
+          <div className={styles.iconWrapper}>
+            <span className={cn(styles.mailIcon, icons.bdbIcon, icons.iconMailOutline)}></span>
+          </div>
         </a>
       </div>
     </section>

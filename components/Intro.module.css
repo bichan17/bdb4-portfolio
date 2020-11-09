@@ -20,14 +20,14 @@
     margin: 0 0 4rem;
     font-size: var(--font-huge-size);
     @media (--media-min-small) {
-      margin: 0 0 5.6rem;
+      margin: 0 0 6.5rem;
       font-size: var(--font-largest-size);
     }
   }
   & p {
     margin: 0 0 2.5rem;
     @media (--media-min-small) {
-      margin: 0 0 4rem;
+      margin: 0 0 3.5rem;
     }
   }
   & p:last-child {
