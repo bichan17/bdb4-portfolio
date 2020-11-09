@@ -8,7 +8,7 @@
   margin: 0 0 1.7rem;
 
   @media (--media-min-small) {
-    margin: 0 0 2.8rem;
+    margin: 0 0 1.9rem;
   }
 }
 .markdown ul,
