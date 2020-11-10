@@ -43,7 +43,7 @@
     position: fixed;
     top: 5rem;
     right: 5rem;
-    font-size: 4.8rem;
+    font-size: 5.5rem;
   }
   &:hover {
     @apply --effect-rainbow-swing-hover;
