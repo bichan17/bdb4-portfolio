@@ -25,9 +25,9 @@ const Index = ({ workPosts, funPosts }: Props) => {
           {workPosts.length > 0 && (
             <PortfolioList title="Work" posts={workPosts} />
           )}
-          {funPosts.length > 0 && (
+          {/* {funPosts.length > 0 && (
             <PortfolioList title="Fun Stuff" posts={funPosts} />
-          )}
+          )} */}
         </Container>
       </Layout>
     </>
