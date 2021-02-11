@@ -10,4 +10,4 @@ tags:
   - Netlify
 ---
 
-The portfolio site for the gaming friendly digital agency, Capacity. The site features a custom built interactive shield made with WebGL.
+The portfolio site for the gaming friendly digital agency, Capacity. The site features a custom built interactive shield made with WebGL. The full site is set to launch in early 2021 with many more features.
