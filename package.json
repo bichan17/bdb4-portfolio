@@ -12,14 +12,15 @@
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
     "gray-matter": "4.0.2",
-    "next": "latest",
+    "next": "10.0.3",
     "next-fonts": "^1.1.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "remark": "11.0.2",
     "remark-external-links": "^6.1.0",
     "remark-html": "10.0.0",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.2",
+    "webpack": "^4.46.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.10",
