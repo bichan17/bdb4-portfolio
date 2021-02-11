@@ -25,9 +25,6 @@ const Index = ({ workPosts, funPosts }: Props) => {
           {workPosts.length > 0 && (
             <PortfolioList title="Work" posts={workPosts} />
           )}
-          {/* {funPosts.length > 0 && (
-            <PortfolioList title="Fun Stuff" posts={funPosts} />
-          )} */}
         </Container>
       </Layout>
     </>
@@ -40,6 +37,7 @@ export const getStaticProps = async () => {
   const fields = ["title", "slug", "project_link", "tags", "content"];
   const workPosts = await getPostsByType("work", fields);
   const funPosts = await getPostsByType("fun", fields);
+
 
   return {
     props: { workPosts, funPosts },
