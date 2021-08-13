@@ -33,8 +33,9 @@
 
   /* layout */
   /* --layout-max-width: 1440px; */
+  --layout-content-max-width: 120rem;
   --layout-max-width: 1920px;
 
   --layout-gutter-width: 2.2rem;
-  --layout-gutter-width-desktop: 3.2rem;
+  --layout-gutter-width-desktop: 5rem;
 }

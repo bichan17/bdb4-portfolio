@@ -1,6 +1,5 @@
 @import "../styles/custom-media.css";
 @import "../styles/custom-properties.css";
-@import "../styles/twelve-col.css";
 @import "../styles/effects.css";
 
 .root {
@@ -12,7 +11,8 @@
   line-height: 1.4;
   padding: 0 var(--layout-gutter-width);
   @media (--media-min-small) {
-    @apply --twelve-col;
+    padding: 0 var(--layout-gutter-width-desktop);
+
     font-size: var(--font-massive-size);
   }
   & h2 {
@@ -35,7 +35,21 @@
   }
 }
 .textWrapper {
+  max-width: var(--layout-content-max-width);
+}
+.scrollDown {
+  position: absolute;
+  transform: translateX(-50%) rotate(180deg);
+  left: 50%;
+  bottom: 3rem;
+
   @media (--media-min-small) {
-    @apply --twelve-col-inner;
+    bottom: 5rem;
+  }
+}
+.iconWrapper {
+  font-size: 4rem;
+  @media (--media-min-small) {
+    font-size: 7rem;
   }
 }

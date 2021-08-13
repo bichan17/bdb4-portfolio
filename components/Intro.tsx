@@ -1,9 +1,22 @@
+import { useRef } from "react";
+import { cn } from "../lib/helpers";
+
 import styles from "./Intro.module.css";
+import icons from "../styles/icons.module.css";
+
 import { EMAIL_ADDRESS, RESUME } from "../lib/constants";
 
 const Intro = () => {
+  const introRef = useRef<HTMLDivElement>(null);
+  const clickButton = () => {
+    if (introRef.current) {
+      const y = introRef.current.getBoundingClientRect().height;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className={styles.root}>
+    <section className={styles.root} ref={introRef}>
       <div className={styles.textWrapper}>
         <h2>Hi, how are you?</h2>
         <p>
@@ -37,6 +50,11 @@ const Intro = () => {
           .
         </p>
       </div>
+      <button className={styles.scrollDown} onClick={clickButton}>
+        <div className={styles.iconWrapper}>
+          <span className={cn(icons.bdbIcon, icons.iconCarrot)}></span>
+        </div>
+      </button>
     </section>
   );
 };

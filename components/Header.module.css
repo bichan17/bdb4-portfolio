@@ -8,6 +8,7 @@
   width: 100%;
   background-color: var(--color-black);
   padding: 0 var(--layout-gutter-width);
+  z-index: 1;
   @media (--media-min-small) {
     position: absolute;
     background-color: transparent;

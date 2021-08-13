@@ -32,3 +32,6 @@
 .iconMailOutline:before {
   content: "\e901";
 }
+.iconCarrot:before {
+  content: "\ea50";
+}

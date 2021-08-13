@@ -1,12 +1,17 @@
 @import "../styles/custom-media.css";
 @import "../styles/custom-properties.css";
-@import "../styles/twelve-col.css";
 
 .root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 14rem;
   padding: 0 var(--layout-gutter-width);
+  padding-top: 14rem;
   @media (--media-min-small) {
-    @apply --twelve-col;
+    padding: 0 var(--layout-gutter-width-desktop);
+    padding-top: 14rem;
+
     margin-bottom: 21rem;
   }
 }
@@ -16,7 +21,7 @@
 
 .wrapper {
   @media (--media-min-small) {
-    @apply --twelve-col-inner;
+    max-width: var(--layout-content-max-width);
   }
 }
 
