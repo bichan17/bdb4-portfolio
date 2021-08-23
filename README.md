@@ -10,25 +10,6 @@ To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) a
 
 ## How to use
 
-### Using `create-next-app`
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example blog-starter-typescript blog-starter-typescript-app
-# or
-yarn create next-app --example blog-starter-typescript blog-starter-typescript-app
-```
-
-### Download manually
-
-Download the example:
-
-```bash
-curl https://codeload.github.com/vercel/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/blog-starter-typescript
-cd blog-starter-typescript
-```
-
 Install dependencies and run the example:
 
 ```bash
@@ -41,10 +22,4 @@ yarn install
 yarn dev
 ```
 
-Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
-
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-# Notes
-
-This blog-starter-typescript uses [Tailwind CSS](https://tailwindcss.com). To control the generated stylesheet's filesize, this example uses Tailwind CSS' v1.4 [`purge` option](https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css) to remove unused CSS.
+The site should be up and running on [http://localhost:3000](http://localhost:3000)!
