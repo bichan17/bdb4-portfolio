@@ -8,9 +8,10 @@
   align-items: center;
   justify-content: center;
   font-size: var(--font-large-size);
-  line-height: 1.4;
+  line-height: 1.1;
   padding: 0 var(--layout-gutter-width);
   @media (--media-min-small) {
+    line-height: 1.25;
     padding: 0 var(--layout-gutter-width-desktop);
 
     font-size: var(--font-massive-size);
@@ -44,7 +45,7 @@
   bottom: 3rem;
 
   @media (--media-min-small) {
-    bottom: 5rem;
+    bottom: 3rem;
   }
 }
 .iconWrapper {
