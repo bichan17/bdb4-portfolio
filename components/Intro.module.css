@@ -13,7 +13,9 @@
   @media (--media-min-small) {
     line-height: 1.25;
     padding: 0 var(--layout-gutter-width-desktop);
-
+    font-size: var(--font-huge-size);
+  }
+  @media (--media-min-large) {
     font-size: var(--font-massive-size);
   }
   & h2 {
@@ -21,6 +23,9 @@
     margin: 0 0 4rem;
     font-size: var(--font-huge-size);
     @media (--media-min-small) {
+      font-size: var(--font-massive-size);
+    }
+    @media (--media-min-large) {
       margin: 0 0 6.5rem;
       font-size: var(--font-largest-size);
     }

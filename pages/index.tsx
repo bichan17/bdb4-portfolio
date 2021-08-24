@@ -5,14 +5,14 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import { getPostsByType } from "../lib/api";
 import Head from "next/head";
-import Post from "../types/post";
+import Post from "../@types/post";
 
 type Props = {
   workPosts: Post[];
-  funPosts: Post[];
+  // funPosts: Post[];
 };
 
-const Index = ({ workPosts, funPosts }: Props) => {
+const Index = ({ workPosts }: Props) => {
   return (
     <>
       <Layout>
@@ -36,10 +36,9 @@ export default Index;
 export const getStaticProps = async () => {
   const fields = ["title", "slug", "project_link", "tags", "content"];
   const workPosts = await getPostsByType("work", fields);
-  const funPosts = await getPostsByType("fun", fields);
-
+  // const funPosts = await getPostsByType("fun", fields);
 
   return {
-    props: { workPosts, funPosts },
+    props: { workPosts },
   };
 };

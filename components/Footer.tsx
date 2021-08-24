@@ -1,7 +1,9 @@
+import React from "react";
+
 import styles from "./Footer.module.css";
 import { EMAIL_ADDRESS, RESUME } from "../lib/constants";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className={styles.root}>
       <a href={`mailto:${EMAIL_ADDRESS}`}>

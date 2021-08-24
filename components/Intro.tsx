@@ -1,3 +1,5 @@
+import React from "react";
+
 import { useRef } from "react";
 import { cn } from "../lib/helpers";
 
@@ -6,7 +8,7 @@ import icons from "../styles/icons.module.css";
 
 import { EMAIL_ADDRESS, RESUME } from "../lib/constants";
 
-const Intro = () => {
+const Intro: React.FC = () => {
   const introRef = useRef<HTMLDivElement>(null);
   const clickButton = () => {
     if (introRef.current) {
@@ -38,28 +40,22 @@ const Intro = () => {
             <span>BBH NY</span>
           </a>
           . Some of my recent clients include{" "}
-          <a
-            rel="nofollow"
-            target="_blank"
-            href="https://capacity.gg/"
-          >
+          <a rel="nofollow" target="_blank" href="https://capacity.gg/">
             <span>Capacity Studios</span>
-          </a>,{" "}
-           <a
+          </a>
+          ,{" "}
+          <a
             rel="nofollow"
             target="_blank"
             href="https://apartamentostudios.com/"
           >
             <span>Apartamento Studios</span>
-          </a> 
+          </a>
           , and the{" "}
-          <a
-            rel="nofollow"
-            target="_blank"
-            href="https://mocadetroit.org/"
-          >
+          <a rel="nofollow" target="_blank" href="https://mocadetroit.org/">
             <span>Museum of Contemporary Art in Detroit</span>
-          </a>.
+          </a>
+          .
         </p>
 
         <p>

@@ -3,16 +3,17 @@ import markdownStyles from "./markdown-styles.module.css";
 import styles from "./PortfolioItem.module.css";
 import icons from "../styles/icons.module.css";
 
-type Props = {
+interface Props {
   title: string;
   date: string;
   slug: string;
   project_link: string;
   tags: Array<string>;
   content: string;
-};
+}
 
-const PortfolioItem = ({ title, project_link, tags, content }: Props) => {
+const PortfolioItem = (props: Props) => {
+  const { title, project_link, tags, content } = props;
   return (
     <div className={styles.root}>
       <h3 className={styles.projectTitle}>

@@ -1,13 +1,14 @@
 import PortfolioItem from "./PortfolioItem";
-import Post from "../types/post";
+import Post from "../@types/post";
 import styles from "./PortfolioList.module.css";
 
-type Props = {
+interface Props {
   title: string;
   posts: Post[];
-};
+}
 
-const PortfolioList = ({ title, posts }: Props) => {
+const PortfolioList = (props: Props) => {
+  const { title, posts } = props;
   return (
     <section className={styles.root}>
       <div className={styles.wrapper}>

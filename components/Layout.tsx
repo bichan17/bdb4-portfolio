@@ -1,12 +1,13 @@
+import React, { ReactNode } from "react";
+
 import Footer from "./Footer";
 import Meta from "./Meta";
 
-type Props = {
-  preview?: boolean;
-  children: React.ReactNode;
-};
+interface Props {
+  children?: ReactNode;
+}
 
-const Layout = ({ preview, children }: Props) => {
+const Layout: React.FC = ({ children }: Props) => {
   return (
     <>
       <Meta />
