@@ -2,12 +2,17 @@
 @import "../styles/custom-properties.css";
 
 .root {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 14rem;
   padding: 0 var(--layout-gutter-width);
   padding-top: 14rem;
+  max-width: var(--layout-content-max-width);
+  margin: 0 auto;
+
   @media (--media-min-small) {
     padding: 0 var(--layout-gutter-width-desktop);
     padding-top: 14rem;
@@ -17,12 +22,6 @@
 }
 .root:last-child {
   margin-bottom: 0;
-}
-
-.wrapper {
-  @media (--media-min-small) {
-    max-width: var(--layout-content-max-width);
-  }
 }
 
 .listTitle {

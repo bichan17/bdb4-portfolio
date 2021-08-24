@@ -3,6 +3,8 @@
 @import "../styles/effects.css";
 
 .root {
+  position: relative;
+  z-index: 2;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -10,6 +12,9 @@
   font-size: var(--font-large-size);
   line-height: 1.1;
   padding: 0 var(--layout-gutter-width);
+  max-width: var(--layout-content-max-width);
+  margin: 0 auto;
+
   @media (--media-min-small) {
     line-height: 1.25;
     padding: 0 var(--layout-gutter-width-desktop);
@@ -39,9 +44,6 @@
   & p:last-child {
     margin-bottom: 0;
   }
-}
-.textWrapper {
-  max-width: var(--layout-content-max-width);
 }
 .scrollDown {
   position: absolute;
