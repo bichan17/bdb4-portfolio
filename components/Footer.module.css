@@ -2,11 +2,13 @@
 @import "../styles/custom-properties.css";
 
 .root {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 14rem 0 5rem;
+  padding: 14rem 0 5rem;
   @media (--media-min-small) {
     flex-direction: row;
   }

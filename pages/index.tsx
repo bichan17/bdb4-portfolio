@@ -1,3 +1,5 @@
+import React, { useRef } from "react";
+
 import Container from "../components/Container";
 import PortfolioList from "../components/PortfolioList";
 import Intro from "../components/Intro";
@@ -6,7 +8,6 @@ import Header from "../components/Header";
 import { getPostsByType } from "../lib/api";
 import Head from "next/head";
 import Post from "../@types/post";
-import ToyScene from "../components/ToyScene";
 
 type Props = {
   workPosts: Post[];
@@ -26,7 +27,6 @@ const Index = ({ workPosts }: Props) => {
           {workPosts.length > 0 && (
             <PortfolioList title="Work" posts={workPosts} />
           )}
-          <ToyScene />
         </Container>
       </Layout>
     </>

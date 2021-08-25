@@ -1,11 +1,14 @@
 import React, { ReactNode } from "react";
+import styles from "./Container.module.css";
 
-interface Props {
+interface ContainerProps {
   children?: ReactNode;
 }
 
-const Container: React.FC = ({ children }: Props) => {
-  return <div className="">{children}</div>;
+const Container = (props: ContainerProps) => {
+  const { children } = props;
+
+  return <div className={styles.root}>{children}</div>;
 };
 
 export default Container;

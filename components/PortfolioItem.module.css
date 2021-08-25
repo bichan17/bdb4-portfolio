@@ -7,6 +7,9 @@
   @media (--media-min-small) {
     margin-bottom: 5.5rem;
   }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .projectTitle {
