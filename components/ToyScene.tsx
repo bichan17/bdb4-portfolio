@@ -2,33 +2,31 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./ToyScene.module.css";
 import Matter from "matter-js";
 import useMousePosition from "../lib/useMousePosition";
-import useUpdateEffect from "../lib/useUpdateEffect";
 
-interface ToySceneProps {
-  containerRef: any;
-}
+interface ToySceneProps {}
 
-const ToyScene: React.FC = ({ containerRef }: ToySceneProps) => {
+const ToyScene: React.FC<ToySceneProps> = () => {
   const canvas = useRef(null);
   const [scene, setScene] = useState();
   const [activeBodies, setActiveBodies] = useState([]);
 
   const mousePosition = useMousePosition();
 
-  useEffect(() => {
-    const Engine = Matter.Engine,
-      Events = Matter.Events,
-      Runner = Matter.Runner,
-      Render = Matter.Render,
-      World = Matter.World,
-      Body = Matter.Body,
-      Bounds = Matter.Bounds,
-      Mouse = Matter.Mouse,
-      Common = Matter.Common,
-      Vector = Matter.Vector,
-      Composite = Matter.Composite,
-      Bodies = Matter.Bodies;
+  //Matter.js namespace variables
+  const Engine = Matter.Engine,
+    Events = Matter.Events,
+    Runner = Matter.Runner,
+    Render = Matter.Render,
+    World = Matter.World,
+    Body = Matter.Body,
+    Bounds = Matter.Bounds,
+    Common = Matter.Common,
+    Vector = Matter.Vector,
+    Query = Matter.Query,
+    Composite = Matter.Composite,
+    Bodies = Matter.Bodies;
 
+  useEffect(() => {
     // create engine
     const engine = Engine.create();
 
@@ -141,52 +139,6 @@ const ToyScene: React.FC = ({ containerRef }: ToySceneProps) => {
       }
     });
 
-    //mouse dragging control
-    // const mouseConstraintOptions = {
-    //   mouse: Mouse.create(render.canvas),
-    //   constraint: {
-    //     stiffness: 0.007,
-    //     render: {
-    //       visible: false,
-    //       lineWidth: 300,
-    //     },
-    //   },
-    // };
-    // const mouseConstraint = Matter.MouseConstraint.create(
-    //   engine,
-    //   mouseConstraintOptions
-    // );
-    // World.add(world, mouseConstraint);
-
-    //mouse hover events
-    const mouseConstraintOptions = {
-      mouse: Mouse.create(render.canvas),
-      constraint: {
-        stiffness: 0.007,
-        render: {
-          visible: false,
-          lineWidth: 300,
-        },
-      },
-    };
-    let mConstraint = Matter.MouseConstraint.create(
-      engine,
-      mouseConstraintOptions
-    );
-    World.add(world, mConstraint);
-
-    //Add event with 'mousemove'
-    //instead of on mouse move, run when new mouse positon occurs
-    // Events.on(mConstraint, "mousemove", function (event) {
-    //   //For Matter.Query.point pass "array of bodies" and "mouse position"
-    //   var foundPhysics = Query.point(allBodies, event.mouse.position);
-
-    //   // console.log("matter", event.mouse.position);
-
-    //   //Your custom code here
-    //   // console.log(foundPhysics[0]); //returns a shape corrisponding to the mouse position
-    // });
-
     function getNewBoundsByTranslateVector(bounds, vector) {
       const newBounds = {
         min: {
@@ -208,8 +160,18 @@ const ToyScene: React.FC = ({ containerRef }: ToySceneProps) => {
 
   useEffect(() => {
     if (scene) {
-      var foundPhysics = Matter.Query.point(activeBodies, mousePosition);
-      console.log(foundPhysics[0]);
+      var foundPhysics = Query.point(activeBodies, mousePosition);
+      const foundBody = foundPhysics[0];
+
+      if (foundBody) {
+        var force = 0.1;
+        var deltaVector = Vector.sub(mousePosition, foundBody.position);
+        var normalizedDelta = Vector.normalise(deltaVector);
+        var negDelta = Vector.neg(normalizedDelta);
+        var forceVector = Vector.mult(negDelta, force);
+
+        Body.applyForce(foundBody, mousePosition, forceVector);
+      }
     }
   }, [mousePosition]);
   return (
