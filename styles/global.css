@@ -15,9 +15,9 @@ a,
 button {
   /* @apply --solid-underline; */
   text-decoration: none;
-  color: var(--color-yellow);
+  color: var(--color-white);
   & > span {
-    @apply --solid-underline;
+    @apply --solid-underline-white;
   }
 }
 
