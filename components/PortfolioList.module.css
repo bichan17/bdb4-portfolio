@@ -8,24 +8,24 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 14rem;
-  padding: 0 var(--layout-gutter-width);
-  padding-top: 14rem;
-  max-width: var(--layout-content-max-width);
+  padding: 14rem var(--layout-gutter-width);
+  max-width: var(--layout-content-max-width-tablet);
   margin: 0 auto;
 
   @media (--media-min-small) {
-    padding: 0 var(--layout-gutter-width-desktop);
-    padding-top: 14rem;
-
-    margin-bottom: 21rem;
+    padding: 14rem var(--layout-gutter-width-desktop) 21rem;
+  }
+  @media (--media-min-large) {
+    max-width: var(--layout-content-max-width-desktop);
   }
 }
-.root:last-child {
+/* .root:last-child {
   margin-bottom: 0;
-}
+} */
 
 .listTitle {
   margin: 0 0 5.9rem;
+  font-family: var(--font-family-serif);
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
   @media (--media-min-small) {

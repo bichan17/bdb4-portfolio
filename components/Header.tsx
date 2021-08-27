@@ -1,8 +1,6 @@
 import React from "react";
 
-import { cn } from "../lib/helpers";
-import { EMAIL_ADDRESS } from "../lib/constants";
-import icons from "../styles/icons.module.css";
+import { EMAIL_ADDRESS, RESUME, GITHUB_URL } from "../lib/constants";
 
 import styles from "./Header.module.css";
 
@@ -10,18 +8,33 @@ const Header: React.FC = () => {
   return (
     <section className={styles.root}>
       <div className={styles.wrapper}>
-        <h1 className={styles.name}>Eric Bichan</h1>
-        <a className={styles.mailLink} href={`mailto:${EMAIL_ADDRESS}`}>
-          <div className={styles.iconWrapper}>
-            <span
-              className={cn(
-                styles.mailIcon,
-                icons.bdbIcon,
-                icons.iconMailOutline
-              )}
-            ></span>
-          </div>
-        </a>
+        <ul className={styles.linkList}>
+          <li>
+            <a
+              className={styles.link}
+              target="_blank"
+              rel="nofollow"
+              href={GITHUB_URL}
+            >
+              Github
+            </a>
+          </li>
+          <li>
+            <a
+              className={styles.link}
+              target="_blank"
+              rel="nofollow"
+              href={RESUME}
+            >
+              Resume
+            </a>
+          </li>
+          <li>
+            <a className={styles.link} href={`mailto:${EMAIL_ADDRESS}`}>
+              Contact
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   );

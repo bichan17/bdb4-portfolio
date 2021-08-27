@@ -22,16 +22,12 @@ const Intro: React.FC = () => {
       <div className={styles.textWrapper}>
         <h2>Hi, how are you?</h2>
         <p>
-          I’m Eric Bichan, a web developer based in Brooklyn, specializing in
-          projects in the arts and media space. Here is my{" "}
-          <a rel="nofollow" target="_blank" href={RESUME}>
-            <span>resume</span>
-          </a>
-          .
+          I’m Eric Bichan, a web developer based in Brooklyn, NY, working
+          tirelessly to appease all algorithms.
         </p>
 
         <p>
-          I am currently freelance, previously with{" "}
+          I am currently freelance and open for new work, previously with{" "}
           <a
             rel="nofollow"
             target="_blank"
@@ -39,7 +35,10 @@ const Intro: React.FC = () => {
           >
             <span>BBH NY</span>
           </a>
-          . Some of my recent clients include{" "}
+          .
+        </p>
+        <p>
+          Recent clients include{" "}
           <a rel="nofollow" target="_blank" href="https://capacity.gg/">
             <span>Capacity Studios</span>
           </a>

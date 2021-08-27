@@ -22,7 +22,7 @@
     content: "-";
     margin-left: 0;
     margin-right: 7px;
-    color: var(--color-yellow);
+    color: var(--color-white);
     @media (--media-min-small) {
       margin-right: 11px;
     }
