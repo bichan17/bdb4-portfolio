@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--color-black);
+  background-color: var(--color-blue);
   padding: 0 var(--layout-gutter-width);
   z-index: 3;
   @media (--media-min-small) {

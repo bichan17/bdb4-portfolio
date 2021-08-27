@@ -1,14 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { RefObject, useEffect, useRef, useState } from "react";
 import styles from "./ToyScene.module.css";
 import Matter from "matter-js";
 import useMousePosition from "../lib/useMousePosition";
 
 interface ToySceneProps {}
 
+interface CustomBody extends Matter.Body {
+  enteredScene?: boolean;
+}
+interface CanvasSize {
+  width: number;
+  height: number;
+}
+
 const ToyScene: React.FC<ToySceneProps> = () => {
-  const canvas = useRef(null);
-  const [scene, setScene] = useState();
-  const [activeBodies, setActiveBodies] = useState([]);
+  const canvas: RefObject<HTMLCanvasElement | undefined> = useRef();
+  const [scene, setScene] = useState<Matter.Render>();
+  const [activeBodies, setActiveBodies] = useState<CustomBody[]>([]);
+  const [canvasSize, setCanvasSize] = useState<CanvasSize>();
 
   const mousePosition = useMousePosition();
 
@@ -26,12 +35,24 @@ const ToyScene: React.FC<ToySceneProps> = () => {
     Composite = Matter.Composite,
     Bodies = Matter.Bodies;
 
+  const handleResize = () => {
+    setCanvasSize({
+      width: Math.min(document.body.clientWidth),
+      height: Math.min(document.body.clientHeight),
+    });
+  };
+
+  //set up physics scene on first render
   useEffect(() => {
     // create engine
     const engine = Engine.create();
 
     const clientWidth = Math.min(document.body.clientWidth);
     const clientHeight = Math.min(document.body.clientHeight);
+
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue(
+      "--color-blue"
+    );
 
     // create renderer
     const render = Render.create({
@@ -40,7 +61,7 @@ const ToyScene: React.FC<ToySceneProps> = () => {
       options: {
         width: clientWidth,
         height: clientHeight,
-        background: "#000",
+        background: bgColor,
         wireframes: false,
       },
     });
@@ -55,25 +76,24 @@ const ToyScene: React.FC<ToySceneProps> = () => {
     const world = engine.world;
     world.gravity.scale = 0;
 
+    //scene parameters
     const NUM_BODIES = 30;
+    const Y_START = -1000;
+    const FRICTION_AIR = 0.002;
+    const MIN_RECTANGLE_WIDTH = 40;
+    const MAX_RECTANGLE_WIDTH = 300;
 
     for (let i = 0; i < NUM_BODIES; i += 1) {
       const options = {
         friction: 0,
-        frictionAir: 0.002,
+        frictionAir: FRICTION_AIR,
         render: {
-          fillStyle: Common.choose([
-            "#0C38E8",
-            "#0080FF",
-            "#0CBCE8",
-            "#0DFFE6",
-          ]),
+          fillStyle: Common.choose(["#081A73", "#05114D", "#061159"]),
         },
       };
-      const Y_START = -1000;
 
-      const rectWidth = Common.random(20, 200);
-      const rectangle = Bodies.rectangle(
+      const rectWidth = Common.random(MIN_RECTANGLE_WIDTH, MAX_RECTANGLE_WIDTH);
+      const rectangle: CustomBody = Bodies.rectangle(
         Common.random(0, clientWidth),
         Y_START,
         rectWidth,
@@ -89,13 +109,13 @@ const ToyScene: React.FC<ToySceneProps> = () => {
 
       World.add(world, [rectangle]);
     }
-    const allBodies = Composite.allBodies(world);
+    const allBodies: CustomBody[] = Composite.allBodies(world);
 
     Events.on(engine, "beforeUpdate", function (event) {
       for (let i = 0; i < allBodies.length; i += 1) {
         const body = allBodies[i];
-        let x = null,
-          y = null;
+        let translateX = undefined,
+          translateY = undefined;
         let wrapBody = false;
 
         //check if body entered scene for the first time, start wrapping
@@ -103,22 +123,22 @@ const ToyScene: React.FC<ToySceneProps> = () => {
           body.enteredScene = true;
         }
         if (body.bounds.min.x > render.bounds.max.x) {
-          x = render.bounds.min.x - body.bounds.max.x;
+          translateX = render.bounds.min.x - body.bounds.max.x;
           wrapBody = true;
         } else if (body.bounds.max.x < render.bounds.min.x) {
-          x = render.bounds.max.x - body.bounds.min.x;
+          translateX = render.bounds.max.x - body.bounds.min.x;
           wrapBody = true;
         }
         if (body.bounds.min.y > render.bounds.max.y) {
-          y = render.bounds.min.y - body.bounds.max.y;
+          translateY = render.bounds.min.y - body.bounds.max.y;
           wrapBody = true;
         } else if (body.bounds.max.y < render.bounds.min.y) {
-          y = render.bounds.max.y - body.bounds.min.y;
+          translateY = render.bounds.max.y - body.bounds.min.y;
           wrapBody = true;
         }
         if (wrapBody) {
           let overlappingBodies = 0;
-          const translateVector = Vector.create(x, y);
+          const translateVector = Vector.create(translateX, translateY);
           const futureBounds = getNewBoundsByTranslateVector(
             body.bounds,
             translateVector
@@ -139,7 +159,10 @@ const ToyScene: React.FC<ToySceneProps> = () => {
       }
     });
 
-    function getNewBoundsByTranslateVector(bounds, vector) {
+    const getNewBoundsByTranslateVector = (
+      bounds: Matter.Bounds,
+      vector: Matter.Vector
+    ) => {
       const newBounds = {
         min: {
           x: bounds.min.x + vector.x,
@@ -152,12 +175,14 @@ const ToyScene: React.FC<ToySceneProps> = () => {
       };
 
       return newBounds;
-    }
+    };
 
     setScene(render);
     setActiveBodies(allBodies);
+    window.addEventListener("resize", handleResize);
   }, []);
 
+  //check for mouse position over bodies, apply opposite force to move body away.
   useEffect(() => {
     if (scene) {
       var foundPhysics = Query.point(activeBodies, mousePosition);
@@ -168,12 +193,35 @@ const ToyScene: React.FC<ToySceneProps> = () => {
         var deltaVector = Vector.sub(mousePosition, foundBody.position);
         var normalizedDelta = Vector.normalise(deltaVector);
         var negDelta = Vector.neg(normalizedDelta);
+
         var forceVector = Vector.mult(negDelta, force);
 
+        // Body.applyForce(foundBody, foundBody.position, forceVector);
         Body.applyForce(foundBody, mousePosition, forceVector);
       }
     }
   }, [mousePosition]);
+
+  //remove resize listener
+  useEffect(() => {
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (canvasSize && scene) {
+      let { width, height } = canvasSize;
+
+      // Dynamically update canvas and bounds
+      scene.bounds.max.x = width;
+      scene.bounds.max.y = height;
+      scene.options.width = width;
+      scene.options.height = height;
+      scene.canvas.width = width;
+      scene.canvas.height = height;
+    }
+  }, [scene, canvasSize]);
   return (
     <div className={styles.root}>
       <canvas className={styles.canvas} ref={canvas}></canvas>

@@ -8,6 +8,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@types/matter-js": "^0.17.5",
     "@zeit/next-css": "^1.0.1",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",

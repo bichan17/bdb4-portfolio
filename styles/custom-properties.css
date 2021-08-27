@@ -6,9 +6,10 @@
   --color-white: #fff;
   --color-yellow: #f9e248;
   --color-pink: #dd03c4;
-  --color-blue: #3852fa;
+  --color-blue: #0a1b8c;
 
-  --color-link-hover: var(--color-blue);
+  /* #0a1b8c */
+  --color-link-hover: var(--color-pink);
 
   /* Typography */
   --font-small-size: 1.4rem;
