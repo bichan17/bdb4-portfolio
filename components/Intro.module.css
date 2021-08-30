@@ -32,21 +32,28 @@
     margin: 0 0 2rem;
     font-family: var(--font-family-serif);
     font-size: 3.2rem;
+
+    @apply --effect-fadeInUp;
+    animation-duration: var(--animation-timing-duration);
+    animation-delay: var(--animation-timing-first);
     @media (--media-min-extra-small) {
       font-size: 4.2rem;
       margin: 0 0 4rem;
     }
     @media (--media-min-small) {
-      font-size: 9.2rem;
+      font-size: 8.8rem;
     }
     @media (--media-min-large) {
-      margin: 0 0 6.5rem;
+      margin: 0 0 4.8rem;
     }
   }
   & p {
     margin: 0 0 2rem;
+    @apply --effect-fadeIn;
+    animation-duration: var(--animation-timing-duration);
+    animation-delay: var(--animation-timing-second);
     @media (--media-min-small) {
-      margin: 0 0 3.5rem;
+      margin: 0 0 2.5rem;
     }
   }
   & p:last-child {
@@ -59,6 +66,9 @@
   left: 50%;
   bottom: 3rem;
 
+  @apply --effect-fadeIn;
+  animation-duration: var(--animation-timing-duration);
+  animation-delay: var(--animation-timing-third);
   @media (--media-min-small) {
     bottom: 3rem;
   }

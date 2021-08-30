@@ -22,8 +22,8 @@ const Intro: React.FC = () => {
       <div className={styles.textWrapper}>
         <h2>Hi, how are you?</h2>
         <p>
-          I’m Eric Bichan, a web developer based in Brooklyn, NY, working
-          tirelessly to appease all algorithms.
+          I’m Eric Bichan, a web developer with a creative approach and an eye
+          for detail based in Brooklyn, NY.
         </p>
 
         <p>

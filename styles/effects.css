@@ -98,7 +98,19 @@
 
     animation: rainbow-text-bg-position 1s linear infinite, swing 0.5s linear 1;
   }
+
+  --effect-fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-fill-mode: forwards;
+  }
+  --effect-fadeIn {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+  }
 }
+
 @keyframes rainbow-text-bg-position {
   0% {
     background-position-x: 0px;
@@ -127,5 +139,27 @@
 
   to {
     transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
