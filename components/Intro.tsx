@@ -39,16 +39,16 @@ const Intro: React.FC = () => {
         </p>
         <p>
           Recent clients include{" "}
-          <a rel="nofollow" target="_blank" href="https://capacity.gg/">
-            <span>Capacity Studios</span>
-          </a>
-          ,{" "}
           <a
             rel="nofollow"
             target="_blank"
             href="https://apartamentostudios.com/"
           >
             <span>Apartamento Studios</span>
+          </a>
+          ,{" "}
+          <a rel="nofollow" target="_blank" href="https://capacity.gg/">
+            <span>Capacity Studios</span>
           </a>
           , and the{" "}
           <a rel="nofollow" target="_blank" href="https://mocadetroit.org/">
