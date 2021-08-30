@@ -65,10 +65,10 @@
   transform: translateX(-50%) rotate(180deg);
   left: 50%;
   bottom: 3rem;
-
   @apply --effect-fadeIn;
   animation-duration: var(--animation-timing-duration);
   animation-delay: var(--animation-timing-third);
+
   @media (--media-min-small) {
     bottom: 3rem;
   }

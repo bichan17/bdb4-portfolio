@@ -67,11 +67,13 @@ const Intro: React.FC = () => {
           .
         </p>
       </div>
-      <button className={styles.scrollDown} onClick={clickButton}>
-        <div className={styles.iconWrapper}>
-          <span className={cn(icons.bdbIcon, icons.iconCarrot)}></span>
-        </div>
-      </button>
+      <div className={styles.scrollDown}>
+        <button onClick={clickButton}>
+          <div className={styles.iconWrapper}>
+            <span className={cn(icons.bdbIcon, icons.iconCarrot)}></span>
+          </div>
+        </button>
+      </div>
     </section>
   );
 };
