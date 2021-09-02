@@ -27,52 +27,14 @@ const Intro: React.FC = () => {
         </p>
 
         <p>
-          I am currently freelance and open for new work, previously with{" "}
-          <a
-            rel="nofollow"
-            target="_blank"
-            href="https://newyork.bartleboglehegarty.com/"
-          >
-            <span>BBH NY</span>
-          </a>
-          .
-        </p>
-        <p>
-          Recent clients include{" "}
-          <a
-            rel="nofollow"
-            target="_blank"
-            href="https://apartamentostudios.com/"
-          >
-            <span>Apartamento Studios</span>
-          </a>
-          ,{" "}
-          <a rel="nofollow" target="_blank" href="https://capacity.gg/">
-            <span>Capacity Studios</span>
-          </a>
-          , and the{" "}
-          <a rel="nofollow" target="_blank" href="https://mocadetroit.org/">
-            <span>Museum of Contemporary Art in Detroit</span>
-          </a>
-          .
-        </p>
-
-        <p>
           Want to make something cool together?
           <br />
-          Feel free to{" "}
+          Email me at{" "}
           <a rel="nofollow" target="_blank" href={`mailto:${EMAIL_ADDRESS}`}>
-            <span>reach out</span>
+            <span>{EMAIL_ADDRESS}</span>
           </a>
           .
         </p>
-      </div>
-      <div className={styles.scrollDown}>
-        <button onClick={clickButton}>
-          <div className={styles.iconWrapper}>
-            <span className={cn(icons.bdbIcon, icons.iconCarrot)}></span>
-          </div>
-        </button>
       </div>
     </section>
   );

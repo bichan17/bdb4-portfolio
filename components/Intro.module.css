@@ -5,12 +5,11 @@
 .root {
   position: relative;
   z-index: 2;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: var(--font-base-size);
-  padding: 0 var(--layout-gutter-width);
+  padding: 16rem var(--layout-gutter-width) 0;
   max-width: var(--layout-content-max-width-tablet);
   margin: 0 auto;
 
@@ -20,7 +19,7 @@
 
   @media (--media-min-small) {
     line-height: 1.25;
-    padding: 0 var(--layout-gutter-width-desktop);
+    padding: max(25vh, 16rem) var(--layout-gutter-width-desktop) 0;
     font-size: var(--font-huge-size);
   }
   @media (--media-min-large) {
@@ -41,9 +40,11 @@
       margin: 0 0 4rem;
     }
     @media (--media-min-small) {
-      font-size: 8.8rem;
+      font-size: 6.8rem;
     }
     @media (--media-min-large) {
+      font-size: 8.8rem;
+
       margin: 0 0 4.8rem;
     }
   }
@@ -58,19 +59,6 @@
   }
   & p:last-child {
     margin-bottom: 0;
-  }
-}
-.scrollDown {
-  position: absolute;
-  transform: translateX(-50%) rotate(180deg);
-  left: 50%;
-  bottom: 3rem;
-  @apply --effect-fadeIn;
-  animation-duration: var(--animation-timing-duration);
-  animation-delay: var(--animation-timing-third);
-
-  @media (--media-min-small) {
-    bottom: 3rem;
   }
 }
 .iconWrapper {

@@ -1,5 +1,6 @@
 @import "../styles/custom-media.css";
 @import "../styles/custom-properties.css";
+@import "../styles/effects.css";
 
 .root {
   position: relative;
@@ -8,23 +9,23 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 14rem;
-  padding: 14rem var(--layout-gutter-width);
+  padding: 11rem var(--layout-gutter-width);
   max-width: var(--layout-content-max-width-tablet);
   margin: 0 auto;
+  @apply --effect-fadeIn;
+  animation-duration: var(--animation-timing-duration);
+  animation-delay: var(--animation-timing-third);
 
   @media (--media-min-small) {
-    padding: 14rem var(--layout-gutter-width-desktop) 21rem;
+    padding: max(22vh, 14rem) var(--layout-gutter-width-desktop) 21rem;
   }
   @media (--media-min-large) {
     max-width: var(--layout-content-max-width-desktop);
   }
 }
-/* .root:last-child {
-  margin-bottom: 0;
-} */
 
 .listTitle {
-  margin: 0 0 5.9rem;
+  margin: 0 0 3.9rem;
   font-family: var(--font-family-serif);
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);

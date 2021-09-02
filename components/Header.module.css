@@ -6,7 +6,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--color-blue);
   padding: 0 var(--layout-gutter-width);
   z-index: 3;
   @apply --effect-fadeIn;
@@ -14,11 +13,16 @@
   animation-delay: var(--animation-timing-third);
   @media (--media-min-small) {
     position: absolute;
-    background-color: transparent;
     padding: 0 5rem;
   }
 }
-
+.backgroundFilled {
+  background-color: var(--color-blue);
+  transition: background-color 0.2s linear;
+  @media (--media-min-small) {
+    background-color: transparent;
+  }
+}
 .wrapper {
   display: flex;
   width: 100%;
@@ -44,6 +48,9 @@
   }
 
   @media (--media-min-small) {
+    gap: 2.5rem;
+  }
+  @media (--media-min-large) {
     gap: 3rem;
   }
 
@@ -61,8 +68,8 @@
 .link {
   display: flex;
   font-size: 2.2rem;
-  @media (--media-min-small) {
-    font-size: 3.5rem;
+  @media (--media-min-large) {
+    font-size: 3rem;
   }
   &:hover {
     @apply --effect-rainbow-swing-hover;
