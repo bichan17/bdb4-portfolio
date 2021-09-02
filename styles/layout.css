@@ -23,4 +23,8 @@ body {
     font-size: var(--font-large-size);
     line-height: var(--font-large-line-height);
   }
+  @media (--media-min-large) {
+    font-size: var(--font-huge-size);
+    line-height: var(--font-huge-line-height);
+  }
 }

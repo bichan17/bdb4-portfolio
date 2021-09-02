@@ -9,18 +9,15 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 14rem;
-  padding: 11rem var(--layout-gutter-width);
-  max-width: var(--layout-content-max-width-tablet);
+  padding: 5rem var(--layout-gutter-width);
+  max-width: var(--layout-content-max-width);
   margin: 0 auto;
   @apply --effect-fadeIn;
   animation-duration: var(--animation-timing-duration);
-  animation-delay: var(--animation-timing-third);
+  animation-delay: var(--animation-timing-second);
 
   @media (--media-min-small) {
-    padding: max(22vh, 14rem) var(--layout-gutter-width-desktop) 21rem;
-  }
-  @media (--media-min-large) {
-    max-width: var(--layout-content-max-width-desktop);
+    padding: 7rem var(--layout-gutter-width-desktop) 10rem;
   }
 }
 

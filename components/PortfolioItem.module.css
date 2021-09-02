@@ -17,8 +17,12 @@
   font-family: var(--font-family-serif);
   font-size: var(--font-large-size);
   @media (--media-min-small) {
-    margin: 0 0 2.3rem;
+    margin: 0 0 1.9rem;
     font-size: var(--font-huge-size);
+  }
+  @media (--media-min-large) {
+    margin: 0 0 2.3rem;
+    font-size: var(--font-massive-size);
   }
   & a {
     display: inline-flex;
@@ -66,9 +70,6 @@
 .tags {
   /* font-size: var(--font-small-size); */
   color: var(--color-gray);
-  @media (--media-min-small) {
-    font-size: 2rem;
-  }
 }
 
 @keyframes bounce-small {

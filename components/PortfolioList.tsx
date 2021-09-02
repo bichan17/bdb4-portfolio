@@ -12,7 +12,7 @@ const PortfolioList = (props: Props) => {
   return (
     <section className={styles.root}>
       <div className={styles.wrapper}>
-        <h2 className={styles.listTitle}>{title}</h2>
+        {/* <h2 className={styles.listTitle}>{title}</h2> */}
         <div>
           {posts.map((post) => (
             <PortfolioItem
