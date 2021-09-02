@@ -12,7 +12,7 @@
   animation-duration: var(--animation-timing-duration);
   animation-delay: var(--animation-timing-second);
   @media (--media-min-small) {
-    position: absolute;
+    position: relative;
     padding: 0 5rem;
   }
 }
