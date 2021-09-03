@@ -38,16 +38,6 @@ const Header: React.FC = () => {
             </a>
           </li>
           <li>
-            <a
-              className={styles.link}
-              target="_blank"
-              rel="nofollow"
-              href={RESUME}
-            >
-              About
-            </a>
-          </li>
-          <li>
             <a className={styles.link} href={`mailto:${EMAIL_ADDRESS}`}>
               Contact
             </a>
