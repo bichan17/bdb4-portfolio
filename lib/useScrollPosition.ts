@@ -9,7 +9,8 @@ function useScrollPosition(throttleRate: number = 50) {
     const sub = fromEvent<Event>(window, "scroll")
       .pipe(throttleTime(throttleRate))
       .subscribe((event) => {
-        setScrollY(event.target.scrollingElement.scrollTop);
+        const target = event.target as HTMLDocument;
+        setScrollY(target.scrollingElement.scrollTop);
       });
     return () => {
       sub.unsubscribe();
