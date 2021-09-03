@@ -17,7 +17,7 @@
   animation-delay: var(--animation-timing-second);
 
   @media (--media-min-small) {
-    padding: 7rem var(--layout-gutter-width-desktop) 10rem;
+    padding: 10rem var(--layout-gutter-width-desktop) 10rem;
   }
 }
 

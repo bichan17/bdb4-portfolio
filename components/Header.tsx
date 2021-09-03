@@ -1,5 +1,4 @@
-import React from "react";
-
+import Link from "next/link";
 import { EMAIL_ADDRESS, RESUME, GITHUB_URL } from "../lib/constants";
 import { cn } from "../lib/helpers";
 import useScrollPosition from "../lib/useScrollPosition";
@@ -16,6 +15,11 @@ const Header: React.FC = () => {
       )}
     >
       <div className={styles.wrapper}>
+        <div>
+          <Link href="/">
+            <a className={styles.link}>Eric Bichan</a>
+          </Link>
+        </div>
         <ul className={styles.linkList}>
           <li>
             <a
@@ -38,14 +42,9 @@ const Header: React.FC = () => {
             </a>
           </li>
           <li>
-            <a
-              className={styles.link}
-              target="_blank"
-              rel="nofollow"
-              href={RESUME}
-            >
-              About
-            </a>
+            <Link href="/about">
+              <a className={styles.link}>About</a>
+            </Link>
           </li>
           <li>
             <a className={styles.link} href={`mailto:${EMAIL_ADDRESS}`}>

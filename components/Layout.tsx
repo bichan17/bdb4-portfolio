@@ -6,6 +6,7 @@ import ToyScene from "./ToyScene";
 import useMousePosition from "../lib/useMousePosition";
 
 import styles from "./Layout.module.css";
+import Header from "./Header";
 
 interface Props {
   children?: ReactNode;
@@ -16,7 +17,10 @@ const Layout: React.FC = ({ children }: Props) => {
     <>
       <Meta />
       <div className={styles.root}>
-        <main>{children}</main>
+        <main>
+          <Header />
+          {children}
+        </main>
       </div>
       <ToyScene />
     </>
