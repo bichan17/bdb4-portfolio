@@ -1,4 +1,6 @@
 @import "../styles/breakpoints.scss";
+@import "../styles/effects.scss";
+
 
 .root {
   position: fixed;
@@ -6,21 +8,25 @@
   width: 100%;
   padding: 0 var(--layout-gutter-width);
   z-index: 3;
-  /* @apply --effect-fadeIn; */
+  @include effect-fadeIn;
   animation-duration: var(--animation-timing-duration);
   animation-delay: var(--animation-timing-second);
+
   @media (min-width: $media-min-small) {
     position: relative;
     padding: 0 5rem;
   }
 }
+
 .backgroundFilled {
   background-color: var(--color-blue);
   transition: background-color 0.2s linear;
+
   @media (min-width: $media-min-small) {
     background-color: transparent;
   }
 }
+
 .wrapper {
   display: flex;
   width: 100%;
@@ -28,12 +34,14 @@
   align-items: center;
   padding: 1.3rem 0;
   border-bottom: 1px solid var(--color-white);
+
   @media (min-width: $media-min-small) {
     border: 0;
     flex-direction: row-reverse;
     padding: 4.2rem 0;
   }
 }
+
 .linkList {
   margin: 0;
   padding: 0;
@@ -49,28 +57,34 @@
   @media (min-width: $media-min-small) {
     gap: 2.5rem;
   }
+
   @media (min-width: $media-min-large) {
     gap: 3rem;
   }
 
-  & li {
+  li {
     font-family: var(--font-family-serif);
   }
 }
+
 .name {
   line-height: 1;
   margin: 0;
+
   @media (min-width: $media-min-small) {
     display: none;
   }
 }
+
 .link {
   display: flex;
   font-size: 2.2rem;
+
   @media (min-width: $media-min-large) {
     font-size: 3rem;
   }
+
   &:hover {
-    /* @apply --effect-rainbow-swing-hover; */
+    @include effect-rainbow-swing-hover;
   }
 }

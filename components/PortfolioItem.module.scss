@@ -1,11 +1,13 @@
-
 @import "../styles/breakpoints.scss";
+@import "../styles/effects.scss";
 
 .root {
   margin-bottom: 4.5rem;
+
   @media (min-width: $media-min-small) {
     margin-bottom: 5.5rem;
   }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -15,59 +17,74 @@
   margin: 0 0 1.7rem;
   font-family: var(--font-family-serif);
   font-size: var(--font-large-size);
+
   @media (min-width: $media-min-small) {
     margin: 0 0 1.9rem;
     font-size: var(--font-huge-size);
   }
+
   @media (min-width: $media-min-large) {
     margin: 0 0 2.3rem;
     font-size: var(--font-massive-size);
   }
-  & a {
+
+  a {
     display: inline-flex;
     align-items: center;
     color: var(--color-white);
     background-image: none;
   }
+
   & a:hover {
-    /* @apply --effect-rainbow-hover; */
-    & .projectTitleText {
-      /* @apply --solid-underline-hover; */
+
+    @include effect-rainbow-hover;
+
+    .projectTitleText {
+      @include solid-underline-hover;
     }
-    & .arrowIcon {
+
+    .arrowIcon {
       transition: all 0.35s ease;
 
       animation-duration: 0.35s;
       animation-name: bounce-small;
       animation-iteration-count: infinite;
       animation-direction: alternate;
+
       @media (min-width: $media-min-small) {
         animation-name: bounce;
       }
     }
   }
 }
+
 .projectTitleText {
-  /* @apply --solid-underline-white; */
+
+  @include solid-underline-white;
+
   &:hover {
-    /* @apply --solid-underline-hover; */
+    @include solid-underline-hover;
     color: var(--color-link-hover);
-    & svg {
+
+    svg {
       fill: var(--color-link-hover);
     }
   }
 }
+
 .arrowIcon {
   transition: all 0.35s ease;
   font-size: 3rem;
   margin-left: 1.4rem;
+
   @media (min-width: $media-min-small) {
     font-size: 3.6rem;
     margin-left: 1.9rem;
   }
 }
+
 .tags {
-  /* font-size: var(--font-small-size); */
+  font-size: var(--font-small-size);
   color: var(--color-gray);
 }
 
@@ -80,6 +97,7 @@
     margin-left: 1.9rem;
   }
 }
+
 @keyframes bounce {
   from {
     margin-left: 1.9rem;
