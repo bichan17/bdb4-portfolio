@@ -1,8 +1,10 @@
-@import "./fonts.css";
-@import "./custom-media.css";
-@import "./custom-properties.css";
-@import "./effects.css";
+@import "./fonts.scss";
+@import "./custom-media.scss";
+@import "./custom-properties.scss";
+@import "./effects.scss";
 
+
+// TODO: Add @apply statements back across all files, convert for sass
 html {
   font-family: var(--font-family-sans);
   font-size: 62.5%;
@@ -46,7 +48,7 @@ button {
   text-decoration: none;
   color: var(--color-white);
   & > span {
-    @apply --solid-underline-white;
+    // @apply --solid-underline-white;
   }
 }
 
@@ -54,13 +56,13 @@ button {
   a,
   button {
     &:hover {
-      @apply --effect-rainbow-hover;
+      // @apply --effect-rainbow-hover;
       color: var(--color-link-hover);
       & svg {
         fill: var(--color-link-hover);
       }
       & > span {
-        @apply --solid-underline-hover;
+        // @apply --solid-underline-hover;
       }
     }
   }

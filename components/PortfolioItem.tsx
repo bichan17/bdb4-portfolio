@@ -1,7 +1,7 @@
 import { cn } from "../lib/helpers";
 import markdownStyles from "./markdown-styles.module.css";
 import styles from "./PortfolioItem.module.css";
-import icons from "../styles/icons.module.css";
+import icons from "../styles/icons.module.scss";
 
 interface Props {
   title: string;

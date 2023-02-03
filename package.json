@@ -10,7 +10,6 @@
   "dependencies": {
     "@next/font": "^13.1.6",
     "@types/matter-js": "^0.17.5",
-    "@zeit/next-css": "^1.0.1",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
     "eslint-config-next": "^13.1.6",
@@ -34,9 +33,6 @@
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "dotenv": "8.2.0",
-    "postcss-apply": "^0.12.0",
-    "postcss-import": "^12.0.1",
-    "postcss-preset-env": "^6.6.0",
     "sass": "^1.58.0"
   }
 }
