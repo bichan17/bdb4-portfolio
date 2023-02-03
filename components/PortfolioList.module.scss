@@ -1,3 +1,5 @@
+@import "../styles/breakpoints.scss";
+
 .root {
   position: relative;
   z-index: 2;
@@ -12,7 +14,7 @@
   animation-duration: var(--animation-timing-duration);
   animation-delay: var(--animation-timing-second);
 
-  @media (--media-min-small) {
+  @media (min-width: $media-min-small) {
     padding: 7rem var(--layout-gutter-width-desktop) 10rem;
   }
 }
@@ -22,7 +24,7 @@
   font-family: var(--font-family-serif);
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
-  @media (--media-min-small) {
+  @media (min-width: $media-min-small) {
     margin: 0 0 9rem;
     font-size: var(--font-large-size);
     line-height: var(--font-large-line-height);

@@ -1,11 +1,9 @@
 import React, { ReactNode } from "react";
 
-import Footer from "./Footer";
 import Meta from "./Meta";
 import ToyScene from "./ToyScene";
-import useMousePosition from "../lib/useMousePosition";
 
-import styles from "./Layout.module.css";
+import styles from "./Layout.module.scss";
 
 interface Props {
   children?: ReactNode;

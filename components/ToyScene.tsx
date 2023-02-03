@@ -1,5 +1,5 @@
 import React, { RefObject, useEffect, useRef, useState } from "react";
-import styles from "./ToyScene.module.css";
+import styles from "./ToyScene.module.scss";
 import Matter from "matter-js";
 import useMousePosition from "../lib/useMousePosition";
 

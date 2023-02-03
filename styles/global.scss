@@ -1,5 +1,5 @@
 @import "./fonts.scss";
-@import "./custom-media.scss";
+@import "./breakpoints.scss";
 @import "./custom-properties.scss";
 @import "./effects.scss";
 
@@ -22,11 +22,11 @@ body {
   margin: 0;
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
-  @media (--media-min-small) {
+  @media (min-width: $media-min-small) {
     font-size: var(--font-large-size);
     line-height: var(--font-large-line-height);
   }
-  @media (--media-min-large) {
+  @media (min-width: $media-min-large) {
     font-size: var(--font-huge-size);
     line-height: var(--font-huge-line-height);
   }

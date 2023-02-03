@@ -4,7 +4,7 @@ import { EMAIL_ADDRESS, RESUME, GITHUB_URL } from "../lib/constants";
 import { cn } from "../lib/helpers";
 import useScrollPosition from "../lib/useScrollPosition";
 
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 
 const Header: React.FC = () => {
   const scrollPosition = useScrollPosition();

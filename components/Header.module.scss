@@ -1,3 +1,5 @@
+@import "../styles/breakpoints.scss";
+
 .root {
   position: fixed;
   top: 0;
@@ -7,7 +9,7 @@
   /* @apply --effect-fadeIn; */
   animation-duration: var(--animation-timing-duration);
   animation-delay: var(--animation-timing-second);
-  @media (--media-min-small) {
+  @media (min-width: $media-min-small) {
     position: relative;
     padding: 0 5rem;
   }
@@ -15,7 +17,7 @@
 .backgroundFilled {
   background-color: var(--color-blue);
   transition: background-color 0.2s linear;
-  @media (--media-min-small) {
+  @media (min-width: $media-min-small) {
     background-color: transparent;
   }
 }
@@ -26,7 +28,7 @@
   align-items: center;
   padding: 1.3rem 0;
   border-bottom: 1px solid var(--color-white);
-  @media (--media-min-small) {
+  @media (min-width: $media-min-small) {
     border: 0;
     flex-direction: row-reverse;
     padding: 4.2rem 0;
@@ -39,14 +41,15 @@
   display: flex;
   justify-content: space-between;
 
-  @media (--media-max-small) {
+
+  @media (max-width: $media-max-small) {
     width: 100%;
   }
 
-  @media (--media-min-small) {
+  @media (min-width: $media-min-small) {
     gap: 2.5rem;
   }
-  @media (--media-min-large) {
+  @media (min-width: $media-min-large) {
     gap: 3rem;
   }
 
@@ -57,14 +60,14 @@
 .name {
   line-height: 1;
   margin: 0;
-  @media (--media-min-small) {
+  @media (min-width: $media-min-small) {
     display: none;
   }
 }
 .link {
   display: flex;
   font-size: 2.2rem;
-  @media (--media-min-large) {
+  @media (min-width: $media-min-large) {
     font-size: 3rem;
   }
   &:hover {

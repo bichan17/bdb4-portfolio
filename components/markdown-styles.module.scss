@@ -1,5 +1,4 @@
-/* @import "../styles/custom-media.scss"; */
-/* @import "../styles/custom-properties.css"; */
+@import "../styles/breakpoints.scss";
 
 .markdown p,
 .markdown ul,
@@ -7,7 +6,7 @@
 .markdown blockquote {
   margin: 0 0 1.7rem;
 
-  @media (--media-min-small) {
+  @media (min-width: $media-min-small) {
     margin: 0 0 1.9rem;
   }
 }
@@ -19,14 +18,13 @@
 .markdown li {
   display: table;
 
-  /* TODO: Add this back */
-  /* &:before {
+  &:before {
     content: "-";
     margin-left: 0;
     margin-right: 7px;
     color: var(--color-white);
-    @media (--media-min-small) {
+    @media (min-width: $media-min-small) {
       margin-right: 11px;
     }
-  } */
+  }
 }
