@@ -8,7 +8,7 @@
   padding: 5rem var(--layout-gutter-width);
   max-width: var(--layout-content-max-width);
   margin: 0 auto;
-  @apply --effect-fadeIn;
+  /* @apply --effect-fadeIn; */
   animation-duration: var(--animation-timing-duration);
   animation-delay: var(--animation-timing-second);
 

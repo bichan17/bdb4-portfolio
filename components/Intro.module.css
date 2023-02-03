@@ -25,7 +25,7 @@
     font-family: var(--font-family-serif);
     font-size: 3.2rem;
 
-    @apply --effect-fadeInUp;
+    /* @apply --effect-fadeInUp; */
     animation-duration: var(--animation-timing-duration);
     animation-delay: var(--animation-timing-first);
     @media (--media-min-extra-small) {
@@ -39,7 +39,7 @@
   }
   & p {
     margin: 0 0 2rem;
-    @apply --effect-fadeIn;
+    /* @apply --effect-fadeIn; */
     animation-duration: var(--animation-timing-duration);
     animation-delay: var(--animation-timing-second);
     @media (--media-min-small) {

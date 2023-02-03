@@ -28,9 +28,9 @@
     background-image: none;
   }
   & a:hover {
-    @apply --effect-rainbow-hover;
+    /* @apply --effect-rainbow-hover; */
     & .projectTitleText {
-      @apply --solid-underline-hover;
+      /* @apply --solid-underline-hover; */
     }
     & .arrowIcon {
       transition: all 0.35s ease;
@@ -46,9 +46,9 @@
   }
 }
 .projectTitleText {
-  @apply --solid-underline-white;
+  /* @apply --solid-underline-white; */
   &:hover {
-    @apply --solid-underline-hover;
+    /* @apply --solid-underline-hover; */
     color: var(--color-link-hover);
     & svg {
       fill: var(--color-link-hover);
