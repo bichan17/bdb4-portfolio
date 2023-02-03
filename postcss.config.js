@@ -1,8 +1,8 @@
-module.exports = () => ({
-  plugins: [
-    require("postcss-import"),
-    require("postcss-apply"),
-    require("postcss-preset-env")({
+module.exports = {
+  plugins: {
+    "postcss-import" : {},
+    "postcss-apply" :{},
+    "postcss-preset-env" : {
       stage: 3,
       features: {
         "color-mod-function": { unresolved: "warn" },
@@ -14,6 +14,6 @@ module.exports = () => ({
           preserve: false,
         },
       },
-    }),
-  ],
-});
+    },
+  },
+};
