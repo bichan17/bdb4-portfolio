@@ -4,7 +4,6 @@
 @import "./effects.scss";
 
 
-// TODO: Add @apply statements back across all files, convert for sass
 html {
   font-family: var(--font-family-sans);
   font-size: 62.5%;
@@ -48,7 +47,6 @@ h6 {
 
 a,
 button {
-  @include solid-underline;
   text-decoration: none;
   color: var(--color-white);
 
