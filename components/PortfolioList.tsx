@@ -1,6 +1,6 @@
 import PortfolioItem from "./PortfolioItem";
 import Post from "../@types/post";
-import styles from "./PortfolioList.module.css";
+import styles from "./PortfolioList.module.scss";
 
 interface Props {
   title: string;

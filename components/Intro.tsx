@@ -3,8 +3,7 @@ import React from "react";
 import { useRef } from "react";
 import { cn } from "../lib/helpers";
 
-import styles from "./Intro.module.css";
-import icons from "../styles/icons.module.css";
+import styles from "./Intro.module.scss";
 
 import { EMAIL_ADDRESS, RESUME } from "../lib/constants";
 
