@@ -32,7 +32,6 @@ export async function getPostBySlug(
       items[field] = realSlug;
     }
     if (field === "content") {
-      // items[field] = content;
       items[field] = parsedMarkdown;
     }
 
