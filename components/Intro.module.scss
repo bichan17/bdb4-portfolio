@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10rem var(--layout-gutter-width) 0;
+  padding: 12rem var(--layout-gutter-width) 0;
   max-width: var(--layout-content-max-width);
   margin: 0 auto;
 
@@ -23,20 +23,13 @@
   h2 {
     line-height: 1;
     margin: 0 0 2rem;
-    font-family: var(--font-family-serif);
-    font-size: 3.2rem;
-
+    font-size: 4rem;
     @include effect-fadeInUp;
     animation-duration: var(--animation-timing-duration);
     animation-delay: var(--animation-timing-first);
 
-    @media (min-width: $media-min-extra-small) {
-      font-size: 4.8rem;
-      margin: 0 0 3rem;
-    }
-
-    @media (min-width: $media-min-large) {
-      font-size: 6.5rem;
+    @media (min-width: $media-min-small) {
+      font-size: 6.4rem;
       margin: 0 0 4.8rem;
     }
   }
@@ -45,11 +38,29 @@
     margin: 0 0 2rem;
     @include effect-fadeIn;
     animation-duration: var(--animation-timing-duration);
-    animation-delay: var(--animation-timing-second);
+    // animation-delay: var(--animation-timing-second);
+    font-size: 3rem;
 
     @media (min-width: $media-min-small) {
       margin: 0 0 2.5rem;
+      font-size: 3.8rem;
     }
+  }
+
+  p:nth-child(1) {
+    animation-delay: var(--animation-timing-second)
+  }
+
+  p:nth-child(2) {
+    animation-delay: calc(var(--animation-timing-second) + 1s)
+  }
+
+  p:nth-child(3) {
+    animation-delay: calc(var(--animation-timing-second) + 1.5s)
+  }
+
+  p:nth-child(4) {
+    animation-delay: calc(var(--animation-timing-second) + 2s)
   }
 
   p:last-child {

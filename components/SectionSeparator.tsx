@@ -1,5 +1,12 @@
+import styles from "./SectionSeparator.module.scss";
+
+
 const SectionSeparator = () => {
-  return <hr />;
+  return (
+    <div className={styles.root}>
+      <hr />
+    </div>
+  );
 };
 
 export default SectionSeparator;

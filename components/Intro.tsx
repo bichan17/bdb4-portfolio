@@ -1,11 +1,10 @@
 import React from "react";
 
 import { useRef } from "react";
-import { cn } from "../lib/helpers";
 
 import styles from "./Intro.module.scss";
 
-import { EMAIL_ADDRESS, RESUME } from "../lib/constants";
+import { EMAIL_ADDRESS } from "../lib/constants";
 
 const Intro: React.FC = () => {
   const introRef = useRef<HTMLDivElement>(null);
@@ -24,7 +23,13 @@ const Intro: React.FC = () => {
           I’m Eric Bichan, a web developer with a creative approach and an eye
           for detail based in Brooklyn, NY.
         </p>
-
+        <p>
+          I am currently open to work. <br /> Previously with <a rel="nofollow" target="_blank" href="https://work.co/">
+            <span>Work & Co</span>
+          </a> and <a rel="nofollow" target="_blank" href="https://www.bartleboglehegarty.com/">
+            <span>BBH NY</span>
+          </a>.
+        </p>
         <p>
           Want to make something cool together?
           <br />

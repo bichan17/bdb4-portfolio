@@ -9,15 +9,15 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 14rem;
-  padding: 5rem var(--layout-gutter-width);
+  padding: 0 var(--layout-gutter-width);
   max-width: var(--layout-content-max-width);
   margin: 0 auto;
   @include effect-fadeIn;
   animation-duration: var(--animation-timing-duration);
-  animation-delay: var(--animation-timing-second);
+  animation-delay: var(--animation-timing-last);
 
   @media (min-width: $media-min-small) {
-    padding: 7rem var(--layout-gutter-width-desktop) 10rem;
+    padding: 0 var(--layout-gutter-width-desktop) 10rem;
   }
 }
 

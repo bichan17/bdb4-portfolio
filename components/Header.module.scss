@@ -10,7 +10,7 @@
   z-index: 3;
   @include effect-fadeIn;
   animation-duration: var(--animation-timing-duration);
-  animation-delay: var(--animation-timing-second);
+  animation-delay: var(--animation-timing-third);
 
   @media (min-width: $media-min-small) {
     position: relative;
@@ -61,10 +61,6 @@
   @media (min-width: $media-min-large) {
     gap: 3rem;
   }
-
-  li {
-    font-family: var(--font-family-serif);
-  }
 }
 
 .name {
@@ -80,7 +76,7 @@
   display: flex;
   font-size: 2.2rem;
 
-  @media (min-width: $media-min-large) {
+  @media (min-width: $media-min-small) {
     font-size: 3rem;
   }
 
