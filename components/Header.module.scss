@@ -10,7 +10,7 @@
   z-index: 3;
   @include effect-fadeIn;
   animation-duration: var(--animation-timing-duration);
-  animation-delay: var(--animation-timing-third);
+  animation-delay: var(--animation-timing-last);
 
   @media (min-width: $media-min-small) {
     position: relative;
