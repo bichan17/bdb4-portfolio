@@ -1,5 +1,6 @@
 ---
 project_link: https://pgatour.com/
+lead_image: /pga/lead.png
 title: "PGA TOUR"
 date: "February 2023"
 tags:

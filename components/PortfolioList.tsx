@@ -8,20 +8,15 @@ interface Props {
 }
 
 const PortfolioList = (props: Props) => {
-  const { title, posts } = props;
+  const { posts } = props;
   return (
     <section className={styles.root}>
       <div className={styles.wrapper}>
         <div>
           {posts.map((post) => (
             <PortfolioItem
-              key={post.slug}
-              title={post.title}
-              date={post.date}
-              project_link={post.project_link}
-              slug={post.slug}
-              tags={post.tags}
-              content={post.content}
+              key={post.title}
+              {...post}
             />
           ))}
         </div>

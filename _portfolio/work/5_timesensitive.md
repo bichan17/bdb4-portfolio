@@ -1,6 +1,7 @@
 ---
 project_link: https://timesensitive.fm/
 title: "Time Sensitive Podcast"
+lead_image: /time_sensitive/lead.jpeg
 date: "November 2019"
 tags:
   - Wordpress

@@ -4,17 +4,19 @@
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  margin: 0 0 1.7rem;
+  margin: 0 0 1.3rem;
 
   @media (min-width: $media-min-small) {
     margin: 0 0 1.9rem;
   }
 }
+
 .markdown ul,
 .markdown ol {
   list-style: none;
   padding: 0;
 }
+
 .markdown li {
   display: table;
 
@@ -23,6 +25,7 @@
     margin-left: 0;
     margin-right: 7px;
     color: var(--color-white);
+
     @media (min-width: $media-min-small) {
       margin-right: 11px;
     }

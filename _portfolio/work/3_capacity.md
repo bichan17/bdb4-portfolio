@@ -1,5 +1,6 @@
 ---
 project_link: https://capacity.gg/
+lead_image: /capacity/lead.png
 title: "Capacity.gg"
 date: "November 2020"
 tags:

@@ -1,5 +1,6 @@
 ---
 project_link: https://quiz.creativeladder.org/
+lead_image: /creative_ladder/lead.png
 title: "Creative Ladder Career Finder"
 date: "January 2023"
 tags:
