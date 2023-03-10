@@ -1,6 +1,7 @@
 ---
 project_link: https://andrewzuckerman.com/
 title: "Andrew Zuckerman"
+lead_image: /zuckerman/lead.png
 date: "Feburary 2019"
 tags:
   - Wordpress

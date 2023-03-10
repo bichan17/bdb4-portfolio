@@ -98,6 +98,12 @@
   animation-fill-mode: forwards;
 }
 
+@mixin effect-expandHorizontal {
+  width: 0%;
+  animation-name: expandHorizontal;
+  animation-fill-mode: forwards;
+}
+
 @keyframes rainbow-text-bg-position {
   0% {
     background-position-x: 0px;
@@ -149,5 +155,37 @@
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes expandHorizontal {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes bounce-small {
+  from {
+    margin-left: 1.4rem;
+  }
+
+  to {
+    margin-left: 1.9rem;
+  }
+}
+
+@keyframes bounce {
+  from {
+    margin-left: 1.9rem;
+  }
+
+  to {
+    margin-left: 2.6rem;
   }
 }

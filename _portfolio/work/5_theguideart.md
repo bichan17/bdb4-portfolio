@@ -1,5 +1,6 @@
 ---
 project_link: https://theguide.art/
+lead_image: /theguideart/lead.png
 title: "TheGuide.Art"
 date: "April 2020"
 tags:

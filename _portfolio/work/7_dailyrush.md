@@ -1,5 +1,6 @@
 ---
 project_link: http://dailyrush.us/
+lead_image: /daily_rush/lead.png
 title: "Daily Rush"
 date: "September 2019"
 tags:

@@ -14,18 +14,12 @@
 }
 
 .projectTitle {
-  margin: 0 0 1.7rem;
-  font-family: var(--font-family-serif);
-  font-size: var(--font-large-size);
+  margin: 0 0 1.3rem;
+  font-size: 2.3rem;
 
   @media (min-width: $media-min-small) {
-    margin: 0 0 1.9rem;
-    font-size: var(--font-huge-size);
-  }
-
-  @media (min-width: $media-min-large) {
     margin: 0 0 2.3rem;
-    font-size: var(--font-massive-size);
+    font-size: 3.2rem;
   }
 
   a {
@@ -87,22 +81,8 @@
   color: var(--color-gray);
 }
 
-@keyframes bounce-small {
-  from {
-    margin-left: 1.4rem;
-  }
-
-  to {
-    margin-left: 1.9rem;
-  }
-}
-
-@keyframes bounce {
-  from {
-    margin-left: 1.9rem;
-  }
-
-  to {
-    margin-left: 2.6rem;
-  }
+.leadImage {
+  width: 100%;
+  margin-bottom: 2.5rem;
+  border-radius: 1rem;
 }

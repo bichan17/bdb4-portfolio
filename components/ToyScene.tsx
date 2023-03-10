@@ -3,7 +3,7 @@ import styles from "./ToyScene.module.scss";
 import Matter from "matter-js";
 import useMousePosition from "../lib/useMousePosition";
 
-interface ToySceneProps {}
+interface ToySceneProps { }
 
 interface CustomBody extends Matter.Body {
   enteredScene?: boolean;
@@ -78,36 +78,35 @@ const ToyScene: React.FC<ToySceneProps> = () => {
 
     //scene parameters
     const NUM_BODIES = 30;
-    const Y_START = -1000;
-    const FRICTION_AIR = 0.002;
-    const MIN_RECTANGLE_WIDTH = 40;
-    const MAX_RECTANGLE_WIDTH = 300;
+    const Y_START = -1200;
+    const FRICTION_AIR = 0.001;
+    const MIN_CIRCLE_WIDTH = 40;
+    const MAX_CIRCLE_WIDTH = 300;
 
     for (let i = 0; i < NUM_BODIES; i += 1) {
       const options = {
         friction: 0,
         frictionAir: FRICTION_AIR,
         render: {
-          fillStyle: Common.choose(["#081A73", "#05114D", "#061159"]),
+          fillStyle: Common.choose(["#112291"]),
         },
       };
 
-      const rectWidth = Common.random(MIN_RECTANGLE_WIDTH, MAX_RECTANGLE_WIDTH);
-      const rectangle: CustomBody = Bodies.rectangle(
+      const circleWidth = Common.random(MIN_CIRCLE_WIDTH, MAX_CIRCLE_WIDTH);
+      const circle: CustomBody = Bodies.circle(
         Common.random(0, clientWidth),
         Y_START,
-        rectWidth,
-        rectWidth,
+        circleWidth,
         options
       );
-      rectangle.enteredScene = false;
+      circle.enteredScene = false;
 
-      Body.setVelocity(rectangle, {
+      Body.setVelocity(circle, {
         x: Common.random(-3, 3) + 1,
         y: Common.random(-3, 3) + 5,
       });
 
-      World.add(world, [rectangle]);
+      World.add(world, [circle]);
     }
     const allBodies: CustomBody[] = Composite.allBodies(world);
 

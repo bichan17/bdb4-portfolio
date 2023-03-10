@@ -8,6 +8,7 @@ import Header from "../components/Header";
 import { getPostsByType } from "../lib/api";
 import Head from "next/head";
 import Post from "../@types/post";
+import SectionSeparator from "../components/SectionSeparator";
 
 type Props = {
   workPosts: Post[];
@@ -24,6 +25,7 @@ const Index = ({ workPosts }: Props) => {
         <Container>
           <Header />
           <Intro />
+          <SectionSeparator />
           {workPosts.length > 0 && (
             <PortfolioList title="Work" posts={workPosts} />
           )}
@@ -36,7 +38,7 @@ const Index = ({ workPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const fields = ["title", "slug", "project_link", "tags", "content"];
+  const fields = ["title", "slug", "project_link", "tags", "content", "lead_image"];
   const workPosts = await getPostsByType("work", fields);
   // const funPosts = await getPostsByType("fun", fields);
 

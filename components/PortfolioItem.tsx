@@ -2,20 +2,17 @@ import { cn } from "../lib/helpers";
 import markdownStyles from "./markdown-styles.module.scss";
 import styles from "./PortfolioItem.module.scss";
 import icons from "../styles/icons.module.scss";
+import PostType from "../@types/post";
 
-interface Props {
-  title: string;
-  date: string;
-  slug: string;
-  project_link: string;
-  tags: Array<string>;
-  content: string;
-}
+interface PortfolioItemProps extends PostType { }
 
-const PortfolioItem = (props: Props) => {
-  const { title, project_link, tags, content } = props;
+const PortfolioItem = (props: PortfolioItemProps) => {
+  const { title, project_link, tags, content, lead_image } = props;
   return (
     <div className={styles.root}>
+      {lead_image ? (
+        <img src={`/assets/images/${lead_image}`} className={styles.leadImage} alt={title} />
+      ) : null}
       <h3 className={styles.projectTitle}>
         <a href={project_link} target="_blank">
           <span className={styles.projectTitleText}>{title}</span>
