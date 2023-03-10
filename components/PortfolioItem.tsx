@@ -3,7 +3,7 @@ import markdownStyles from "./markdown-styles.module.scss";
 import styles from "./PortfolioItem.module.scss";
 import icons from "../styles/icons.module.scss";
 
-interface Props {
+interface PortfolioItemProps {
   title: string;
   date: string;
   slug: string;
@@ -12,7 +12,7 @@ interface Props {
   content: string;
 }
 
-const PortfolioItem = (props: Props) => {
+const PortfolioItem = (props: PortfolioItemProps) => {
   const { title, project_link, tags, content } = props;
   return (
     <div className={styles.root}>
