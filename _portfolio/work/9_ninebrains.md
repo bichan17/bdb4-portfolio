@@ -1,6 +1,7 @@
 ---
 project_link: http://nine-brains.com/
 title: "Nine Brains"
+lead_image: /nine_brains/lead.png
 date: "March 2020"
 tags:
   - Javascript
