@@ -5,9 +5,9 @@ title: "Capacity.gg"
 date: "November 2020"
 tags:
   - React
-  - WebGL
   - Gatsby
   - Sanity
+  - WebGL
   - Netlify
 ---
 
