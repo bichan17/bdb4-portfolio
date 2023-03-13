@@ -9,6 +9,7 @@ tags:
   - PHP
 ---
 
-This is the portfolio site for photographer and filmmaker, Andrew Zuckerman, where I provide ongoing project maintenance and updates. Over the past year I have worked with his studio to add various performance optimizations and a web shop powered by [Woocommerce][woo].
+This is the portfolio site for photographer and filmmaker, Andrew Zuckerman. I lead the project through large refactors to add performance optimizations that decreased page loading times while also adding a [web store][store] powered by [Woocommerce][woo].
 
 [woo]: https://woocommerce.com/
+[store]: https://andrewzuckerman.com/store

@@ -10,4 +10,4 @@ tags:
   - ACF
 ---
 
-Time Sensitive is a podcast that features candid, revealing interviews with people who have a distinct perspective on time. The site delivers a media-rich experience, adding visual elements to each episode. The backend is made with Wordpress. Each episode can be made in a modular style, with images and related content interwoven throughout the transcript.
+Time Sensitive is a podcast that features candid, revealing interviews with people who have a distinct perspective on time. The concept of this project was to deliver a media-rich experience, adding visual elements and an interactive transcript to each episode. Powered by a custom Wordpress solution, each episode is built in a modular style, with images and related content interwoven throughout the transcript.

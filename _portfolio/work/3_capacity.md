@@ -11,4 +11,4 @@ tags:
   - Netlify
 ---
 
-The portfolio site for the wonderful gaming-friendly digital agency, Capacity. The site prominently features a custom built interactive shield made with WebGL as well as a lot of attention to detail with many animations and effects. It also has a component-based page building system managed in Sanity.
+The portfolio site for the wonderful gaming-friendly animation studio, Capacity. The site is filled with design details and animations, which were prepared carefully to get everything looking and moving just right. I provided them with a component-based page building that allows each project in their portfolio to be customized while also maintaining the overall design.
