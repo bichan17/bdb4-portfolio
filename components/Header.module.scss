@@ -79,8 +79,10 @@
   @media (min-width: $media-min-small) {
     font-size: 3rem;
   }
+}
 
-  &:hover {
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
     @include effect-rainbow-swing-hover;
   }
 }
