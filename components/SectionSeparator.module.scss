@@ -11,9 +11,8 @@
     animation-delay: var(--animation-timing-third);
 
     @media (min-width: $media-min-small) {
-        margin: 12rem auto;
+        margin: 10rem auto;
         padding: 0 calc(var(--layout-gutter-width-desktop) - 1.8rem);
-
     }
 
     hr {
