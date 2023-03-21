@@ -38,7 +38,6 @@
     margin: 0 0 2rem;
     @include effect-fadeIn;
     animation-duration: var(--animation-timing-duration);
-    // animation-delay: var(--animation-timing-second);
     font-size: 3rem;
 
     @media (min-width: $media-min-small) {
