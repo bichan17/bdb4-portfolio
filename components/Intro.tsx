@@ -9,16 +9,24 @@ const Intro: React.FC = () => (
     <div className={styles.textWrapper}>
       <h2>Hi, how are you?</h2>
       <p>
-        I’m Eric Bichan, a web developer with a creative approach and an eye
-        for detail based in Brooklyn, NY.
+        I’m Eric Bichan, a web developer with a creative approach and an eye for
+        detail based in Brooklyn, NY.
       </p>
-      <p>
-        I am currently open to work. <br /> Previously with <a rel="nofollow" target="_blank" href="https://work.co/">
+      {/* <p>
+        Previously with{" "}
+        <a rel="nofollow" target="_blank" href="https://work.co/">
           <span>Work & Co</span>
-        </a> and <a rel="nofollow" target="_blank" href="https://www.bartleboglehegarty.com/">
+        </a>{" "}
+        and{" "}
+        <a
+          rel="nofollow"
+          target="_blank"
+          href="https://www.bartleboglehegarty.com/"
+        >
           <span>BBH NY</span>
-        </a>.
-      </p>
+        </a>
+        .
+      </p> */}
       <p>
         Want to make something cool together?
         <br />
