@@ -1,7 +1,6 @@
 @import "../styles/breakpoints.scss";
 @import "../styles/effects.scss";
 
-
 .root {
   position: fixed;
   top: 0;
@@ -19,7 +18,7 @@
 }
 
 .backgroundFilled {
-  background-color: var(--color-blue);
+  background-color: var(--color-black);
   transition: background-color 0.2s linear;
 
   @media (min-width: $media-min-small) {
@@ -48,7 +47,6 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
-
 
   @media (max-width: $media-max-small) {
     width: 100%;

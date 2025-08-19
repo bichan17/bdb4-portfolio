@@ -16,7 +16,7 @@ const Layout: React.FC = ({ children }: Props) => {
       <div className={styles.root}>
         <main>{children}</main>
       </div>
-      <ToyScene />
+      {/* <ToyScene /> */}
     </>
   );
 };

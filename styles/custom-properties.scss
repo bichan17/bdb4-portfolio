@@ -2,7 +2,8 @@
   --font-family-sans: "Founders Grotesk Regular", sans-serif;
   --font-family-serif: "Newzald Book", serif;
 
-  --color-black: #000000;
+  --color-black: #050505;
+  --color-offblack: #101010;
   --color-white: #fff;
   --color-gray: #919191;
   --color-yellow: #f9e248;
@@ -18,9 +19,9 @@
   --layout-gutter-width-desktop: 5rem;
 
   --animation-timing-duration: 1s;
-  --animation-timing-first: 1s;
-  --animation-timing-second: 1.5s;
-  --animation-timing-third: 4s;
-  --animation-timing-last: 5s;
 
+  --animation-timing-first: 0.5s;
+  --animation-timing-second: 1s;
+  --animation-timing-third: 3s;
+  --animation-timing-last: 3.5s;
 }

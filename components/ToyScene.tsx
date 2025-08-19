@@ -3,7 +3,7 @@ import styles from "./ToyScene.module.scss";
 import Matter from "matter-js";
 import useMousePosition from "../lib/useMousePosition";
 
-interface ToySceneProps { }
+interface ToySceneProps {}
 
 interface CustomBody extends Matter.Body {
   enteredScene?: boolean;
@@ -51,8 +51,11 @@ const ToyScene: React.FC<ToySceneProps> = () => {
     const clientHeight = Math.min(document.body.clientHeight);
 
     const bgColor = getComputedStyle(document.documentElement).getPropertyValue(
-      "--color-blue"
+      "--color-black"
     );
+    const shapeColor = getComputedStyle(
+      document.documentElement
+    ).getPropertyValue("--color-offblack");
 
     // create renderer
     const render = Render.create({
@@ -88,7 +91,7 @@ const ToyScene: React.FC<ToySceneProps> = () => {
         friction: 0,
         frictionAir: FRICTION_AIR,
         render: {
-          fillStyle: Common.choose(["#112291"]),
+          fillStyle: Common.choose([shapeColor]),
         },
       };
 
@@ -188,7 +191,7 @@ const ToyScene: React.FC<ToySceneProps> = () => {
       const foundBody = foundPhysics[0];
 
       if (foundBody) {
-        var force = 0.1;
+        var force = 1;
         var deltaVector = Vector.sub(mousePosition, foundBody.position);
         var normalizedDelta = Vector.normalise(deltaVector);
         var negDelta = Vector.neg(normalizedDelta);

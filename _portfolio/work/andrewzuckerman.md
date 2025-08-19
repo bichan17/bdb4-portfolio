@@ -7,6 +7,7 @@ tags:
   - Wordpress
   - Woocommerce
   - PHP
+published: false
 ---
 
 This is the portfolio site for photographer and filmmaker, Andrew Zuckerman. I lead the project through large refactors to add performance optimizations that decreased page loading times while also adding a [web store][store] powered by [Woocommerce][woo].
