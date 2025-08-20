@@ -4,14 +4,26 @@ import styles from "./PortfolioItem.module.scss";
 import icons from "../styles/icons.module.scss";
 import PostType from "../@types/post";
 
-interface PortfolioItemProps extends PostType { }
+interface PortfolioItemProps extends PostType {
+  index: number;
+}
 
-const PortfolioItem = (props: PortfolioItemProps) => {
-  const { title, project_link, tags, content, lead_image } = props;
+const PortfolioItem = ({
+  title,
+  project_link,
+  tags,
+  content,
+  lead_image,
+  index,
+}: PortfolioItemProps) => {
   return (
     <div className={styles.root}>
       {lead_image ? (
-        <img src={`/assets/images/${lead_image}`} className={styles.leadImage} alt={title} />
+        <img
+          src={`/assets/images/${lead_image}`}
+          className={styles.leadImage}
+          alt={title}
+        />
       ) : null}
       <h3 className={styles.projectTitle}>
         <a href={project_link} target="_blank">

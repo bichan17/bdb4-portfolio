@@ -2,6 +2,7 @@
 @import "../styles/effects.scss";
 
 .root {
+  position: relative;
   margin-bottom: 4.5rem;
 
   @media (min-width: $media-min-small) {
@@ -23,16 +24,13 @@
   }
 
   a {
-    display: inline-flex;
     align-items: center;
     color: var(--color-white);
     background-image: none;
   }
 
   @media (hover: hover) and (pointer: fine) {
-
     & a:hover {
-
       @include effect-rainbow-hover;
 
       .projectTitleText {
@@ -40,15 +38,24 @@
       }
 
       .arrowIcon {
-        transition: all 0.35s ease;
-
-        animation-duration: 0.35s;
-        animation-name: bounce-small;
+        background-image: linear-gradient(
+          45deg,
+          var(--color-red),
+          var(--color-yellow),
+          var(--color-red)
+        );
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-repeat: unset;
+        background-position: 0px var(--underline-distance);
+        background-size: 1000px 1px;
+        animation-name: rainbow-text-bg-position, bounce-small;
+        animation-duration: 1s, 0.35s;
+        animation-timing-function: linear;
         animation-iteration-count: infinite;
         animation-direction: alternate;
-
         @media (min-width: $media-min-small) {
-          animation-name: bounce;
+          animation-name: rainbow-text-bg-position, bounce;
         }
       }
     }
@@ -56,11 +63,9 @@
 }
 
 .projectTitleText {
-
   @include solid-underline-white;
 
   @media (hover: hover) and (pointer: fine) {
-
     &:hover {
       @include solid-underline-hover;
       color: var(--color-link-hover);
@@ -70,13 +75,15 @@
       }
     }
   }
-
 }
 
 .arrowIcon {
-  transition: all 0.35s ease;
+  display: inline-block;
   font-size: 3rem;
   margin-left: 1.4rem;
+  background-image: none;
+  position: relative;
+  top: 0.7rem;
 
   @media (min-width: $media-min-small) {
     font-size: 3.6rem;
@@ -92,4 +99,6 @@
   width: 100%;
   margin-bottom: 2.5rem;
   border-radius: 1rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }

@@ -4,11 +4,8 @@
 .root {
   position: relative;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 12rem var(--layout-gutter-width) 0;
-  max-width: var(--layout-content-max-width);
+  // max-width: var(--layout-content-max-width);
   margin: 0 auto;
 
   @media (min-width: $media-min-small) {
@@ -22,44 +19,23 @@
 
   h2 {
     line-height: 1;
-    margin: 0 0 2rem;
+    margin: 0 0 3rem;
     font-size: 4rem;
-    @include effect-fadeInUp;
-    animation-duration: var(--animation-timing-duration);
-    animation-delay: var(--animation-timing-first);
 
     @media (min-width: $media-min-small) {
-      font-size: 6.4rem;
-      margin: 0 0 4.8rem;
+      font-size: 5rem;
+      margin: 0 0 3.6rem;
     }
   }
 
   p {
     margin: 0 0 2rem;
-    @include effect-fadeIn;
-    animation-duration: var(--animation-timing-duration);
-    font-size: 3rem;
+
+    font-size: 2rem;
 
     @media (min-width: $media-min-small) {
-      margin: 0 0 2.5rem;
-      font-size: 3.8rem;
+      font-size: 2.6rem;
     }
-  }
-
-  p:nth-child(1) {
-    animation-delay: var(--animation-timing-second);
-  }
-
-  p:nth-child(2) {
-    animation-delay: calc(var(--animation-timing-second) + 0.5s);
-  }
-
-  p:nth-child(3) {
-    animation-delay: calc(var(--animation-timing-second) + 0.8s);
-  }
-
-  p:nth-child(4) {
-    animation-delay: calc(var(--animation-timing-second) + 1.1s);
   }
 
   p:last-child {

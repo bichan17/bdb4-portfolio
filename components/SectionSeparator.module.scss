@@ -2,25 +2,21 @@
 @import "../styles/effects.scss";
 
 .root {
-    padding: 0 var(--layout-gutter-width);
-    margin: 7rem auto;
-    max-width: var(--layout-content-max-width);
-    @include effect-expandHorizontal;
-    opacity: 0;
-    animation-duration: var(--animation-timing-duration);
-    animation-delay: var(--animation-timing-third);
+  padding: 0 var(--layout-gutter-width);
+  margin: 7rem auto;
+  //   max-width: var(--layout-content-max-width);
 
-    @media (min-width: $media-min-small) {
-        margin: 10rem auto;
-        padding: 0 calc(var(--layout-gutter-width-desktop) - 1.8rem);
-    }
+  @media (min-width: $media-min-small) {
+    margin: 10rem auto;
+    padding: 0 var(--layout-gutter-width-desktop);
+  }
 
-    hr {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        height: 1px;
-        border-top: 1px solid white;
-        border-bottom: 0;
-    }
+  hr {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 1px;
+    border-top: 1px solid white;
+    border-bottom: 0;
+  }
 }

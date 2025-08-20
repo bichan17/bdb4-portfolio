@@ -12,12 +12,12 @@ const Intro: React.FC = () => (
         I’m Eric Bichan, a web developer with a creative approach and an eye for
         detail based in Brooklyn, NY.
       </p>
-      {/* <p>
-        Previously with{" "}
+      <p>
+        I have over 10 years of experience working at agencies{" "}
         <a rel="nofollow" target="_blank" href="https://work.co/">
           <span>Work & Co</span>
-        </a>{" "}
-        and{" "}
+        </a>
+        ,{" "}
         <a
           rel="nofollow"
           target="_blank"
@@ -25,12 +25,14 @@ const Intro: React.FC = () => (
         >
           <span>BBH NY</span>
         </a>
+        , and{" "}
+        <a rel="nofollow" target="_blank" href="https://typecode.com/">
+          <span>Type/Code</span>
+        </a>
         .
-      </p> */}
+      </p>
       <p>
-        Want to make something cool together?
-        <br />
-        Email me at{" "}
+        Want to make something cool together? Email me at{" "}
         <a rel="nofollow" target="_blank" href={`mailto:${EMAIL_ADDRESS}`}>
           <span>{EMAIL_ADDRESS}</span>
         </a>

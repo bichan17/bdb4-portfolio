@@ -1,6 +1,7 @@
 import PortfolioItem from "./PortfolioItem";
 import Post from "../@types/post";
 import styles from "./PortfolioList.module.scss";
+import Intro from "./Intro";
 
 interface Props {
   title: string;
@@ -12,14 +13,9 @@ const PortfolioList = (props: Props) => {
   return (
     <section className={styles.root}>
       <div className={styles.wrapper}>
-        <div>
-          {posts.map((post) => (
-            <PortfolioItem
-              key={post.title}
-              {...post}
-            />
-          ))}
-        </div>
+        {posts.map((post, index) => (
+          <PortfolioItem key={post.title} {...post} index={index} />
+        ))}
       </div>
     </section>
   );

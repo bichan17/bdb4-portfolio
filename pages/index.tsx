@@ -38,7 +38,14 @@ const Index = ({ workPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const fields = ["title", "slug", "project_link", "tags", "content", "lead_image"];
+  const fields = [
+    "title",
+    "slug",
+    "project_link",
+    "tags",
+    "content",
+    "lead_image",
+  ];
   const workPosts = await getPostsByType("work", fields);
   // const funPosts = await getPostsByType("fun", fields);
 
