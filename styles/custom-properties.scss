@@ -6,17 +6,20 @@
   --color-offblack: #101010;
   --color-white: #fff;
   --color-gray: #919191;
-  --color-yellow: #f9e248;
+  --color-yellow: #68f948;
   --color-pink: #dd03c4;
-  --color-red: #e90404;
+  --color-red: #045ce9;
   --color-link-hover: var(--color-red);
 
   --underline-distance: 1.05em;
 
   /* layout */
-  --layout-content-max-width: 81rem;
+  --layout-content-max-width: 220rem;
   --layout-gutter-width: 2.2rem;
-  --layout-gutter-width-desktop: 8rem;
+
+  @media (min-width: $media-min-small) {
+    --layout-gutter-width: 8rem;
+  }
 
   --animation-timing-duration: 1s;
 

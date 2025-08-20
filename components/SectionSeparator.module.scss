@@ -4,11 +4,10 @@
 .root {
   padding: 0 var(--layout-gutter-width);
   margin: 7rem auto;
-  //   max-width: var(--layout-content-max-width);
+  max-width: var(--layout-content-max-width);
 
   @media (min-width: $media-min-small) {
     margin: 10rem auto;
-    padding: 0 var(--layout-gutter-width-desktop);
   }
 
   hr {

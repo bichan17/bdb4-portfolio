@@ -5,12 +5,12 @@
   position: relative;
   z-index: 2;
   padding: 12rem var(--layout-gutter-width) 0;
-  // max-width: var(--layout-content-max-width);
+  max-width: var(--layout-content-max-width);
   margin: 0 auto;
 
   @media (min-width: $media-min-small) {
     line-height: 1.25;
-    padding: 5rem var(--layout-gutter-width-desktop) 0;
+    padding: 5rem var(--layout-gutter-width) 0;
   }
 
   @media (min-width: $media-min-large) {

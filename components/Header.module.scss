@@ -5,8 +5,10 @@
   position: fixed;
   top: 0;
   width: 100%;
+  max-width: var(--layout-content-max-width);
   padding: 0 var(--layout-gutter-width);
   z-index: 3;
+  margin: 0 auto;
 
   @media (min-width: $media-min-small) {
     position: relative;

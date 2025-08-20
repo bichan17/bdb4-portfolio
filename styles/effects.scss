@@ -32,7 +32,7 @@
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 
-  animation: rainbow-text-bg-position 1s linear infinite;
+  animation: rainbow-text-bg-position 2s linear infinite;
 }
 
 @mixin solid-underline-hover {
@@ -45,7 +45,7 @@
   background-position: 0px var(--underline-distance);
   background-repeat: repeat-x;
   background-size: 1000px 1px;
-  animation: rainbow-text-bg-position 1s linear infinite;
+  animation: rainbow-text-bg-position 2s linear infinite;
 }
 
 @mixin effect-rainbow-swing-hover {
@@ -72,7 +72,7 @@
 
   -moz-text-fill-color: transparent;
 
-  animation: rainbow-text-bg-position 1s linear infinite, swing 0.5s linear 1;
+  animation: rainbow-text-bg-position 2s linear infinite, swing 0.5s linear 1;
 }
 
 @mixin effect-fadeInUp {
