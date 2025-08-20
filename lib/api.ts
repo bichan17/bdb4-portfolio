@@ -8,6 +8,14 @@ export function getPostSlugsByType(type: string) {
   return fs.readdirSync(postsDirectory);
 }
 
+function isNumeric(str: string) {
+  if (typeof str != "string") return false; // we only process strings!
+  return (
+    !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+    !isNaN(parseFloat(str))
+  ); // ...and ensure strings of whitespace fail
+}
+
 export async function getPostBySlug(
   type: string,
   slug: string,
@@ -51,8 +59,19 @@ export async function getPostBySlug(
 export function getPostsByType(type: string, fields: string[] = []) {
   const slugs = getPostSlugsByType(type);
 
-  const posts = slugs.map(async (slug) => {
+  const sortedSlugs: string[] = [];
+
+  slugs.forEach((slug) => {
+    const slugOrder = slug.split("_")[0];
+    if (isNumeric(slugOrder)) {
+      const intSlugOrder = parseInt(slugOrder);
+      sortedSlugs.splice(intSlugOrder - 1, 0, slug);
+    }
+  });
+
+  const posts = sortedSlugs.map(async (slug) => {
     const post = await getPostBySlug(type, slug, fields);
+
     return post;
   });
   return Promise.all(posts).then((renderedPosts) => {
